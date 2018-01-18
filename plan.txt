@@ -1,0 +1,49 @@
+Key:
+FSFABC = File System Forensic Analysis - Brian Carrier
+
+:: OVERALL STRUCTURE ::
+Lecture 1 hrs
+Lab 1.5 hrs?
+Lec 0.5 hrs?
+
+:: LECTURE IDEAS ::
+Lecture 1:
+	What is digital forensics?
+	
+	Important concepts of the digital forensic process/digital crimescene investigations?
+		  Proving/disproving a hypothesis seraching for evdance as such
+		  General Phases: Preservation, Evidence Searching, Even Reconstruction [FSFABC]
+		  PICL: Preservation, isolation, corrolation, logging. [FSFABC]
+
+	What sub categories are there in digital forensics/Computer science elements envolved in Digital Forensics?
+
+	Types of analysis
+	      Live analysis / Dead analysis [FSFABC]
+	
+	Run though an example digital forensic scenario
+	    possible focuses: file system, or memory forensics.
+	
+
+Lecture 2:
+	Other Areas of Digital Forensics not covered
+	      Network Forensics
+	      IoT's effects on digital forensics
+	Current Research
+	Other resources to checkout
+
+
+:: LAB IDEAS ::
+Idea 1:
+Set up a scenario for the users, a client has stated X thing has occured.
+The lab is to develop a case and timeline of events that match the that prove or disprove the hypothesis given.
+Follow digital forensic procedure to reliably recreate the device in question, verifiy it wish hashes etc.
+Use forensic tools to aid completion of the timeline and make a verdict.
+Possibly have small groups each looking at a different device/file system/memory/network traffic.
+Depending on how much time or how indepth lecure was.
+
+
+:: QUESTIONS FOR MIKE ::
+General tips on giving long form talks/lectures?
+How to not lose interest from your audiance?
+Tips on making labs challenging but achievable, not hand holding all the time?
+

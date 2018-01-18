@@ -1,0 +1,94 @@
+Software Engineering Masterclass - Digital Forensics
+
+Resources (Currently Being Used):
+	  Talks/Videos:
+		T1)	A Geeks Guide To Digital Forensics, Google Talk, Andrew Hogg - https://youtu.be/rPd-HiEvhhw - Last Accessed: 17/01/2018@18:56
+	  Books:
+		B1)	File System Forensic Analysis - Brian Carrier - Publisher: Addison Wesley; 01 edition (17 Mar. 2005) - ISBN-13: 978-0321268174
+		B2)	The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory - Michael Hale Ligh etal. - Publisher: John Wiley & Sons; 1 edition (3 Oct. 2014) - ISBN-13: 978-1118825099
+		B3)	Computer Forensics InfoSec Pro Guide - David Cowen - Publication Date: April 19, 2013 - ASIN: B00BPO7AP8
+		B4)	Practical Forensic Imaging: Securing Digital Evidence with Linux Tools - Bruce Nikkel - Publisher: No Starch Press; 1 edition (1 Sept. 2016) - ASIN: B01M0TQZRY
+
+
+
+Definitions:
+
+Digital/Computer Forensics:
+     "Computer Forensics is the practice of determining the past
+     actions that have taken place on a computer system using forensic
+     techniques and understanding artifacts." - David Cowen, B3
+
+     "Digital Forensics is "the preservation, recovery, analysis, and
+     reporting of digital artifacts." - Andrew Hogg, T1
+
+     "Digital Forensics is a branch of forensic science encompassing
+     the recovery and investigation of material found in digital
+     devices, often in relation to computer crime." - Wikipedia
+
+What is an Artifact:
+     "An Artifact is a reproducible file, setting or system change
+     that occurs everytime an application or operating system performs
+     a specific action" - David Cowen, B3
+
+Digital Investigation:
+     "A digital investigation is a process where we develop and test
+     hypotheses that answer questions about digital events." - Brian
+     Carrier, B1
+
+Scientific Method:
+     "[...]scientific method where we develop a hypothesis using
+     evidence that we find and then test the hypothesis by looking for
+     additional evidence that shows the hypothesis is impossible." -
+     Brian Carrier, B1
+     
+Digital Evidence:
+     "Digital evidence is a digital object that contains reliable
+     information that supports or refutes a hypothesis." - Brian
+     Carrier, B1
+
+Digital Forensic Investigation:
+     "A digital forensic investigation is a process that uses science
+     and technology to analyze digital objects and that develops and
+     tests theories, which can be entered into a court of law, to
+     answer questions about events that occurred. In other words, a
+     digital forensic investigation is a more restricted form of
+     digital investigation." - Brian Carrier, B1
+
+
+Digital Crime Scene Investigation Process - Brian Carrier:
+	"The process has three major phases, which are system preservation, evidence searching, and event reconstruction." - Brian Carrier
+
+	| System Preservation | <---> | Evidence Searching | <---> | Event Reconstruction |	       
+
+	General Guidelines:
+		PICL stands for preservation, isolation, correlation, and logging.
+		Preservation:	 Preservation of the system being investigated.
+		Isolation:	 Isolate the analysis environment from both the suspect data and the outside world.
+		Correlation:	 Correlate data with other independent sources. This helps reduce the risk of forged data.
+		Logging:	 Log and document your actions. This helps identify what searches you have not yet conducted and what your results were.
+
+
+Analysis Types:
+	 Live Analysis
+	      "A live analysis occurs when you use the operating
+	      system or other resources of the system being
+	      investigated to find evidence." - Brian Carrier, B1
+
+	 Dead Analysis:
+	      "A dead analysis occurs when you are running
+	      trusted applications in a trusted operating system to
+	      find evidence." - Brian Carrier, B1
+
+	 
+
+Aquisition Strategies:
+
+
+
+Tools Available:
+      Write Blockers: (Aquisition)
+            Hardware or software devices that allow gathering of
+      	    inforamation without damaging the contents by blocking
+      	    write commands while allowing read commands to pass
+      	    though.
+      	    
