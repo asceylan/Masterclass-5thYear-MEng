@@ -40,7 +40,7 @@ Scientific Method:
      evidence that we find and then test the hypothesis by looking for
      additional evidence that shows the hypothesis is impossible." -
      Brian Carrier, B1
-     
+
 Digital Evidence:
      "Digital evidence is a digital object that contains reliable
      information that supports or refutes a hypothesis." - Brian
@@ -58,7 +58,7 @@ Digital Forensic Investigation:
 Digital Crime Scene Investigation Process - Brian Carrier:
 	"The process has three major phases, which are system preservation, evidence searching, and event reconstruction." - Brian Carrier
 
-	| System Preservation | <---> | Evidence Searching | <---> | Event Reconstruction |	       
+	| System Preservation | <---> | Evidence Searching | <---> | Event Reconstruction |
 
 	General Guidelines:
 		PICL stands for preservation, isolation, correlation, and logging.
