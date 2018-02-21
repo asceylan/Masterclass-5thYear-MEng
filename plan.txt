@@ -1,6 +1,13 @@
 Key:
 FSFABC = File System Forensic Analysis - Brian Carrier
 
+
+:: LEARNING OUTCOMES ::
+Forensic Process
+Understand the connection between digital files and physical storage
+
+
+
 :: OVERALL STRUCTURE ::
 Lecture 1 hrs
 Lab 1.5 hrs?
@@ -8,8 +15,8 @@ Lec 0.5 hrs?
 
 :: LECTURE IDEAS ::
 Lecture 1:
-	What is digital forensics?
-	
+	What is digital?
+
 	Important concepts of the digital forensic process/digital crimescene investigations?
 		  Proving/disproving a hypothesis seraching for evdance as such
 		  General Phases: Preservation, Evidence Searching, Even Reconstruction [FSFABC]
@@ -19,10 +26,10 @@ Lecture 1:
 
 	Types of analysis
 	      Live analysis / Dead analysis [FSFABC]
-	
-	Run though an example digital forensic scenario
+
+        Run though an example digital forensic scenario
 	    possible focuses: file system, or memory forensics.
-	
+
 
 Lecture 2:
 	Other Areas of Digital Forensics not covered
@@ -47,3 +54,12 @@ General tips on giving long form talks/lectures?
 How to not lose interest from your audiance?
 Tips on making labs challenging but achievable, not hand holding all the time?
 
+Week 6 - lecture complete
+week 7-8 lab prep and lecture run throuhgs.
+
+
+Books
+computer security a hands on approach
+
+
+latex slides - beamer

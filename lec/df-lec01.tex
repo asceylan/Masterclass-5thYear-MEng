@@ -1,0 +1,170 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+
+\title{Digital Forensics}
+\subtitle{File System Forensics Masterclass}
+\author{Fraser Brown}
+\institute{Heriot-Watt University}
+\date{\today}
+
+\graphicspath{{../figures/}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}[shrink]
+\section{Overview}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\begin{frame}
+	\frametitle{Digital Forensics Background}
+	\section{Digital Forensics Background}
+		\subsection{What is Digital Forensics?}
+		\begin{block}{Digital Forensics:}
+			``Computer [Digital] Forensics is the practice of determining the past actions that have taken place on a computer system using forensic techniques and understanding artefacts.'' - David Cowen
+		\end{block}
+		
+		\begin{block}{Artefact:}
+			``An Artefact is a reproducible file, setting or system change that occurs every time an application or operating system performs a specific action'' - David Cowen
+		\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analysis Types}
+	\subsection{Analysis Types}
+	\begin{block}{Live Analysis:}
+		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier
+	\end{block}
+
+	\begin{block}{Dead Analysis:}
+		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why File System Forensics?}
+	\section{Why File System Forensics?}
+	\begin{figure}
+		\includegraphics[scale=0.3]{digital-data-analysis-layers-BrianCarrier}
+		\caption{Layers of Analysis}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Forensic Process}
+	\section{Forensic Process}
+		\subsection{Investigation Process Overview}
+		\subsection{PICL Guidelines}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Evidence Acquisition/Imaging}
+	\section{Evidence Acquisition/Imaging}
+	\begin{itemize}
+		\item In order to perform analysis on digital artefacts a forensic duplicate of the media must be created.
+		\item Forensic Duplicates are \emph{bit-for-bit} copies of the original disk and can encompass the full disk or a single partition. 
+		\item This process is known as imaging or acquisition.
+		\item Contents of a disk are always changing therefore \emph{Write Blockers} are used to preserve the disk state.
+		\item Hash functions such as SHA-256, SHA-1, MD5 are used to verify the image against the original artefact.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Write Blockers}
+	\subsection{Write Blockers}
+	\begin{block}{Write Blockers}
+			Are hardware or software devices that allow gathering of information without damaging the disk contents by blocking write commands but allowing read commands.
+	\end{block}
+	\begin{itemize}
+		\item Write Blockers are customisable:
+			\begin{itemize}
+				\item Blocking of all or specific commands.
+				\item Can control the read and write speed.
+			\end{itemize}
+		\item Write Blockers come in two forms:
+			\begin{itemize}
+				\item \emph{Native}: Same interface for input and output e.g. IDE-to-IDE
+				\item \emph{Tailgate}: uses different interfaces for input and output e.g. firewire/USB-to-SATA
+			\end{itemize}
+		\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Imaging Challenges with Solid State Drives (SSD)}
+	\subsection{Imaging Challenges}
+	While an SSD can be imaged with the same tools as a traditional hard disk drive (HDD), there are technology specific issues that cause problems for forensic investigators.
+	\begin{itemize}
+		\item \emph{Program-Erase cycles}
+			\begin{itemize}
+				\item Sequence of events that result in data being written to a solid state flash memory cell, then erased and rewritten (e.g flash memory USB sticks). 
+				\item These P/E cycles result in a small amount of physical damage to the medium, which can result in bad sectors.
+			\end{itemize}
+		\item \emph{Wear Levelling}
+			\begin{itemize}
+				\item prolongs the life of solid state/flash memory
+				\item Distributes rewrites evenly across the medium, so no single block dies prematurely.
+			\end{itemize}
+		\item These two technologies due to the evolution of memory results in unallocated space being overwritten earlier than it would on a HDD. This could overwrite valuable hidden information by accident
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Image Types}
+	\subsection{Image Types}
+	\begin{itemize}
+		\item Raw Format (\texttt{.dd} \texttt{.raw} \texttt{.img})
+		\begin{itemize}
+			\item only contain data from the original artifact
+			\item meta data is no included however can be generated into a separate file by tools.
+			\item Tools: \texttt{dd}, \texttt{dcfldd}, \texttt{dd\_rescue}, \texttt{rdd}, \texttt{df3dd}, \texttt{guymager}
+		\end{itemize}
+		\item EnCase Evidence Format (Expert Witness \texttt{.E01})
+		\begin{itemize}
+			\item Expert Witness images use headers and footers to hold metadata about the image.
+			\item metatdata can include: drive type, source disk OS, timestamps, hashes, CRCs over blocks.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Memory}
+	\section{Hard Disk Technology}
+		\subsection{Memory Types} %HDD SSD NAND-Flash
+		\subsection{Forensics Memory Challenges}
+\end{frame}
+
+\begin{frame}
+	\frametitle{File System}
+	\section{File Systems}
+		\subsection{File System Types} %ntfs, fat etc.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Acquisition and Analysis Tools}
+	\section{The Sleuth Kit (TSK)}
+		\subsection{TSK Layers}
+\end{frame}
+
+\begin{frame}
+	\section{Research}
+	\frametitle{Digital Forensic Research}
+\end{frame}
+
+\begin{frame}
+	\section{Additional Resources}
+	\frametitle{Additional Resources}
+	
+\end{frame}
+
+\begin{frame}
+	\section{Careers}
+	\frametitle{Careers}
+	
+\end{frame}
+
+\end{document} % End Document

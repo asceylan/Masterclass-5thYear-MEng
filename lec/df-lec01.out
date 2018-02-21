@@ -1,0 +1,22 @@
+\BOOKMARK [2][]{Outline0.1}{Overview}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Digital Forensics Background}{}% 2
+\BOOKMARK [3][]{Outline0.2.1.3}{What is Digital Forensics?}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.2.4}{Analysis Types}{Outline0.2}% 4
+\BOOKMARK [2][]{Outline0.3}{Why File System Forensics?}{}% 5
+\BOOKMARK [2][]{Outline0.4}{Forensic Process}{}% 6
+\BOOKMARK [3][]{Outline0.4.1.6}{Investigation Process Overview}{Outline0.4}% 7
+\BOOKMARK [3][]{Outline0.4.2.6}{PICL Guidelines}{Outline0.4}% 8
+\BOOKMARK [2][]{Outline0.5}{Evidence Acquisition/Imaging}{}% 9
+\BOOKMARK [3][]{Outline0.5.1.8}{Write Blockers}{Outline0.5}% 10
+\BOOKMARK [3][]{Outline0.5.2.9}{Imaging Challenges}{Outline0.5}% 11
+\BOOKMARK [3][]{Outline0.5.3.10}{Image Types}{Outline0.5}% 12
+\BOOKMARK [2][]{Outline0.6}{Hard Disk Technology}{}% 13
+\BOOKMARK [3][]{Outline0.6.1.11}{Memory Types}{Outline0.6}% 14
+\BOOKMARK [3][]{Outline0.6.2.11}{Forensics Memory Challenges}{Outline0.6}% 15
+\BOOKMARK [2][]{Outline0.7}{File Systems}{}% 16
+\BOOKMARK [3][]{Outline0.7.1.12}{File System Types}{Outline0.7}% 17
+\BOOKMARK [2][]{Outline0.8}{The Sleuth Kit \(TSK\)}{}% 18
+\BOOKMARK [3][]{Outline0.8.1.13}{TSK Layers}{Outline0.8}% 19
+\BOOKMARK [2][]{Outline0.9}{Research}{}% 20
+\BOOKMARK [2][]{Outline0.10}{ Additional Resources}{}% 21
+\BOOKMARK [2][]{Outline0.11}{Careers}{}% 22

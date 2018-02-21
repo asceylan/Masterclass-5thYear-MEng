@@ -13,6 +13,7 @@ Resources (Currently Being Used):
 
 Definitions:
 
+--- What is Digital Forensics?
 Digital/Computer Forensics:
      "Computer Forensics is the practice of determining the past
      actions that have taken place on a computer system using forensic
@@ -30,6 +31,7 @@ What is an Artifact:
      that occurs everytime an application or operating system performs
      a specific action" - David Cowen, B3
 
+--- Forensic Process:
 Digital Investigation:
      "A digital investigation is a process where we develop and test
      hypotheses that answer questions about digital events." - Brian
@@ -61,7 +63,7 @@ Digital Crime Scene Investigation Process - Brian Carrier:
 	| System Preservation | <---> | Evidence Searching | <---> | Event Reconstruction |
 
 	General Guidelines:
-		PICL stands for preservation, isolation, correlation, and logging.
+		PICL Stands for preservation, isolation, correlation, and logging.
 		Preservation:	 Preservation of the system being investigated.
 		Isolation:	 Isolate the analysis environment from both the suspect data and the outside world.
 		Correlation:	 Correlate data with other independent sources. This helps reduce the risk of forged data.
@@ -69,7 +71,7 @@ Digital Crime Scene Investigation Process - Brian Carrier:
 
 
 Analysis Types:
-	 Live Analysis
+	Live Analysis
 	      "A live analysis occurs when you use the operating
 	      system or other resources of the system being
 	      investigated to find evidence." - Brian Carrier, B1
@@ -79,7 +81,7 @@ Analysis Types:
 	      trusted applications in a trusted operating system to
 	      find evidence." - Brian Carrier, B1
 
-	 
+
 
 Aquisition Strategies:
 
@@ -91,4 +93,4 @@ Tools Available:
       	    inforamation without damaging the contents by blocking
       	    write commands while allowing read commands to pass
       	    though.
-      	    
+
