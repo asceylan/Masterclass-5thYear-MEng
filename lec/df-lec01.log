@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  21 FEB 2018 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  26 FEB 2018 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -857,51 +857,62 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./df-lec01.toc)
 
-Class beamer Warning: Frame text is shrunk by a factor of 18.90564 percent inst
-ead of 0 percent on input line 22.
+Class beamer Warning: Frame text is shrunk by a factor of 15.1413 percent inste
+ad of 0 percent on input line 22.
 
 [2
 
 ] [3
 
-] [4
-
 ]
-<../figures/digital-data-analysis-layers-BrianCarrier.png, id=260, 947.54pt x 3
-85.44pt>
-File: ../figures/digital-data-analysis-layers-BrianCarrier.png Graphic file (ty
-pe png)
- <use ../figures/digital-data-analysis-layers-BrianCarrier.png>
-Package pdftex.def Info: ../figures/digital-data-analysis-layers-BrianCarrier.p
-ng used on input line 56.
-(pdftex.def)             Requested size: 284.26419pt x 115.63289pt.
-
-[5
-
- <../figures/digital-data-analysis-layers-BrianCarrier.png>] [6
-
-] [7
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 95.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 95.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 95.
+line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) [8
+)
+<../figures/digital-data-analysis-layers-BrianCarrier.png, id=229, 947.54pt x 3
+85.44pt>
+File: ../figures/digital-data-analysis-layers-BrianCarrier.png Graphic file (ty
+pe png)
+ <use ../figures/digital-data-analysis-layers-BrianCarrier.png>
+Package pdftex.def Info: ../figures/digital-data-analysis-layers-BrianCarrier.p
+ng used on input line 63.
+(pdftex.def)             Requested size: 284.26419pt x 115.63289pt.
 
-] [9
+[4
+
+] [5
+
+
+ <../figures/digital-data-analysis-layers-BrianCarrier.png>] [6
+
+]
+\openout4 = `df-lec01.vrb'.
+
+
+(./df-lec01.vrb <../figures/df-guidelines.png, id=310, 325.215pt x 72.27pt>
+File: ../figures/df-guidelines.png Graphic file (type png)
+
+<use ../figures/df-guidelines.png>
+Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
+(pdftex.def)             Requested size: 325.2142pt x 72.2698pt.
+) [7
+
+ <../figures/df-guidelines.png>] [8
+
+]
+[9
 
 ] [10
 
@@ -917,6 +928,12 @@ thkerncmss.
 
 ] [16
 
+] [17
+
+] [18
+
+] [19
+
 ]
 \tf@nav=\write6
 \openout6 = `df-lec01.nav'.
@@ -927,79 +944,37 @@ thkerncmss.
 \tf@snm=\write8
 \openout8 = `df-lec01.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
  (./df-lec01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package rerunfilecheck Info: File `df-lec01.out' has not changed.
+(rerunfilecheck)             Checksum: 24CD0F18A5FB2D79792F6200F6ADCBD4;1276.
 
-
-Package rerunfilecheck Warning: File `df-lec01.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `df-lec01.out':
-(rerunfilecheck)             Before: B10C4A6C99B42A58AAAE7DF81F4FF161;1335
-(rerunfilecheck)             After:  CC8C870628CE52E9145DF83761E05555;1334.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 17325 strings out of 492995
- 333271 string characters out of 6132704
- 404467 words of memory out of 5000000
- 20411 multiletter control sequences out of 15000+600000
+ 17341 strings out of 492995
+ 333798 string characters out of 6132704
+ 404537 words of memory out of 5000000
+ 20429 multiletter control sequences out of 15000+600000
  9803 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,62p,793b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Navigation17} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.8.1.14} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.7.1.13} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.6.2.12} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.6.1.12} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.3.11} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.2.10} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.1.9} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.2.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.1.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.2.2.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.2.1.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on df-lec01.pdf (16 pages, 413666 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on df-lec01.pdf (19 pages, 424507 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 67 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 683 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

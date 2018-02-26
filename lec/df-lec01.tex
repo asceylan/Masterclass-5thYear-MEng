@@ -22,16 +22,90 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Digital Forensics Background}
-	\section{Digital Forensics Background}
-		\subsection{What is Digital Forensics?}
-		\begin{block}{Digital Forensics:}
-			``Computer [Digital] Forensics is the practice of determining the past actions that have taken place on a computer system using forensic techniques and understanding artefacts.'' - David Cowen
-		\end{block}
+	\frametitle{What is Digital Forensics}
+	\section{What is Digital Forensics?}
+%	\begin{itemize}
+%		\item Digital forensics is a pulls from both cyber security and forensic science fields.
+%	\end{itemize}
+	\begin{block}{Digital Forensics:}
+		``Computer [Digital] Forensics is the practice of determining the past actions that have taken place on a computer system using forensic techniques and understanding artefacts.'' - David Cowen
+	\end{block}
 		
-		\begin{block}{Artefact:}
-			``An Artefact is a reproducible file, setting or system change that occurs every time an application or operating system performs a specific action'' - David Cowen
-		\end{block}
+	\begin{block}{Artefact:}
+		``An Artefact is a reproducible file, setting or system change that occurs every time an application or operating system performs a specific action'' - David Cowen
+	\end{block}
+
+	The artefacts we will be dealing with in the lab are files and file systems.
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Why File System Analysis?}
+	\section{Why File System Analysis?}
+	\begin{itemize}
+		\item There are many different forms of digital forensic analysis:
+			\begin{itemize}
+				\item Network Analysis,
+				\item Live memory (RAM) Analysis, 
+				\item File system analysis, 
+				\item Database Analysis,
+				\item Application/OS Analysis
+			\end{itemize}
+			\item File system analysis allows:
+			\begin{itemize}
+				\item Introduction to a new field using a common ground
+				\item Insight into how OS files relate to memory and what creation and deletion features actual do
+			\end{itemize}
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[scale=0.3]{digital-data-analysis-layers-BrianCarrier}
+		\caption{Layers of Analysis}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Forensic Process}
+	\section{Forensic Process}
+	Digital forensics results can be used in a court of law therefore accuracy, integrity and an unbiased approach towards evidence is required.\\
+	As a result similar approaches to evidence handling and procedure from traditional forms of forensics are utilised.   
+	\begin{block}{Scientific Method}
+		Defining a hypothesis based on evidence then proceeding search for evidence which disproves our hypothesis.
+	\end{block}
+	\begin{block}{Digital Forensic Investigation}
+	``A digital forensic investigation is a process that uses science
+     and technology to analyse digital objects and that develops and
+     tests theories, which can be entered into a court of law, to
+     answer questions about events that occurred. In other words, a
+     digital forensic investigation is a more restricted form of
+     digital investigation.'' - Brian Carrier
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Digital Crime Scene Investigation Process Overview}
+	\subsection{Digital Crime Scene Investigation Process Overview}
+	There are three major areas in digital crime scene investigations:
+	\begin{itemize}
+		\item System Preservation
+		\item Evidence Searching
+		\item Event Reconstruction
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[scale=1]{df-guidelines}
+		\caption{Diagram of Digital Forensics Investigation Phases}
+		\label{fig:df-guidelines}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PICL Guidelines}
+	\subsection{PICL Guidelines}
+	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good staring structure:
+	\begin{itemize}
+		\item Preservation:	 Preservation of the system being investigated.
+		\item Isolation:	 Keeping analysis environment is separate from both the suspect data and the outside world.
+		\item Correlation:	 Correlate data with other independent sources. Reduces risk of forged data.
+		\item Logging:	 Log/document your actions. This helps identify what searches you have not yet conducted and what your results were.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -44,22 +118,6 @@
 	\begin{block}{Dead Analysis:}
 		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier
 	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Why File System Forensics?}
-	\section{Why File System Forensics?}
-	\begin{figure}
-		\includegraphics[scale=0.3]{digital-data-analysis-layers-BrianCarrier}
-		\caption{Layers of Analysis}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Forensic Process}
-	\section{Forensic Process}
-		\subsection{Investigation Process Overview}
-		\subsection{PICL Guidelines}
 \end{frame}
 
 \begin{frame}

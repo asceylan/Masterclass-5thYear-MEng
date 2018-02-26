@@ -1,22 +1,21 @@
 \beamer@sectionintoc {1}{Overview}{2}{0}{1}
-\beamer@sectionintoc {2}{Digital Forensics Background}{3}{0}{2}
-\beamer@subsectionintoc {2}{1}{What is Digital Forensics?}{3}{0}{2}
-\beamer@subsectionintoc {2}{2}{Analysis Types}{4}{0}{2}
-\beamer@sectionintoc {3}{Why File System Forensics?}{5}{0}{3}
+\beamer@sectionintoc {2}{What is Digital Forensics?}{3}{0}{2}
+\beamer@sectionintoc {3}{Why File System Analysis?}{4}{0}{3}
 \beamer@sectionintoc {4}{Forensic Process}{6}{0}{4}
-\beamer@subsectionintoc {4}{1}{Investigation Process Overview}{6}{0}{4}
-\beamer@subsectionintoc {4}{2}{PICL Guidelines}{6}{0}{4}
-\beamer@sectionintoc {5}{Evidence Acquisition/Imaging}{7}{0}{5}
-\beamer@subsectionintoc {5}{1}{Write Blockers}{8}{0}{5}
-\beamer@subsectionintoc {5}{2}{Imaging Challenges}{9}{0}{5}
-\beamer@subsectionintoc {5}{3}{Image Types}{10}{0}{5}
-\beamer@sectionintoc {6}{Hard Disk Technology}{11}{0}{6}
-\beamer@subsectionintoc {6}{1}{Memory Types}{11}{0}{6}
-\beamer@subsectionintoc {6}{2}{Forensics Memory Challenges}{11}{0}{6}
-\beamer@sectionintoc {7}{File Systems}{12}{0}{7}
-\beamer@subsectionintoc {7}{1}{File System Types}{12}{0}{7}
-\beamer@sectionintoc {8}{The Sleuth Kit (TSK)}{13}{0}{8}
-\beamer@subsectionintoc {8}{1}{TSK Layers}{13}{0}{8}
-\beamer@sectionintoc {9}{Research}{14}{0}{9}
-\beamer@sectionintoc {10}{ Additional Resources}{15}{0}{10}
-\beamer@sectionintoc {11}{Careers}{16}{0}{11}
+\beamer@subsectionintoc {4}{1}{Digital Crime Scene Investigation Process Overview}{7}{0}{4}
+\beamer@subsectionintoc {4}{2}{PICL Guidelines}{8}{0}{4}
+\beamer@subsectionintoc {4}{3}{Analysis Types}{9}{0}{4}
+\beamer@sectionintoc {5}{Evidence Acquisition/Imaging}{10}{0}{5}
+\beamer@subsectionintoc {5}{1}{Write Blockers}{11}{0}{5}
+\beamer@subsectionintoc {5}{2}{Imaging Challenges}{12}{0}{5}
+\beamer@subsectionintoc {5}{3}{Image Types}{13}{0}{5}
+\beamer@sectionintoc {6}{Hard Disk Technology}{14}{0}{6}
+\beamer@subsectionintoc {6}{1}{Memory Types}{14}{0}{6}
+\beamer@subsectionintoc {6}{2}{Forensics Memory Challenges}{14}{0}{6}
+\beamer@sectionintoc {7}{File Systems}{15}{0}{7}
+\beamer@subsectionintoc {7}{1}{File System Types}{15}{0}{7}
+\beamer@sectionintoc {8}{The Sleuth Kit (TSK)}{16}{0}{8}
+\beamer@subsectionintoc {8}{1}{TSK Layers}{16}{0}{8}
+\beamer@sectionintoc {9}{Research}{17}{0}{9}
+\beamer@sectionintoc {10}{Additional Resources}{18}{0}{10}
+\beamer@sectionintoc {11}{Careers}{19}{0}{11}
