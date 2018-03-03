@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  26 FEB 2018 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  2 MAR 2018 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -857,7 +857,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./df-lec01.toc)
 
-Class beamer Warning: Frame text is shrunk by a factor of 15.1413 percent inste
+Class beamer Warning: Frame text is shrunk by a factor of 5.71289 percent inste
 ad of 0 percent on input line 22.
 
 [2
@@ -881,7 +881,7 @@ line 63.
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../figures/digital-data-analysis-layers-BrianCarrier.png, id=229, 947.54pt x 3
+<../figures/digital-data-analysis-layers-BrianCarrier.png, id=220, 947.54pt x 3
 85.44pt>
 File: ../figures/digital-data-analysis-layers-BrianCarrier.png Graphic file (ty
 pe png)
@@ -901,7 +901,7 @@ ng used on input line 63.
 \openout4 = `df-lec01.vrb'.
 
 
-(./df-lec01.vrb <../figures/df-guidelines.png, id=310, 325.215pt x 72.27pt>
+(./df-lec01.vrb <../figures/df-guidelines.png, id=301, 325.215pt x 72.27pt>
 File: ../figures/df-guidelines.png Graphic file (type png)
 
 <use ../figures/df-guidelines.png>
@@ -934,6 +934,8 @@ Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
 
 ] [19
 
+] [20
+
 ]
 \tf@nav=\write6
 \openout6 = `df-lec01.nav'.
@@ -944,13 +946,13 @@ Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
 \tf@snm=\write8
 \openout8 = `df-lec01.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (./df-lec01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `df-lec01.out' has not changed.
-(rerunfilecheck)             Checksum: 24CD0F18A5FB2D79792F6200F6ADCBD4;1276.
+(rerunfilecheck)             Checksum: 90D78E276DBACD3ADF8E499B8E21FF1A;1159.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -958,10 +960,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 17341 strings out of 492995
- 333798 string characters out of 6132704
- 404537 words of memory out of 5000000
- 20429 multiletter control sequences out of 15000+600000
+ 17337 strings out of 492995
+ 333731 string characters out of 6132704
+ 404534 words of memory out of 5000000
+ 20425 multiletter control sequences out of 15000+600000
  9803 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,62p,793b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -971,10 +973,10 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on df-lec01.pdf (19 pages, 424507 bytes).
+Output written on df-lec01.pdf (20 pages, 427268 bytes).
 PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
- 633 compressed objects within 7 object streams
+ 699 PDF objects out of 1000 (max. 8388607)
+ 648 compressed objects within 7 object streams
  61 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

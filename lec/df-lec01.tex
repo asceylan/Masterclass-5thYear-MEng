@@ -190,16 +190,41 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Memory}
-	\section{Hard Disk Technology}
-		\subsection{Memory Types} %HDD SSD NAND-Flash
-		\subsection{Forensics Memory Challenges}
+	\frametitle{What are File Systems?}
+	\section{File Systems}
+	% 
+	\begin{block}{File System:}
+		File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
+	\end{block}
+	
+	%TODO enter diagram of how file system interacts with os and hardware
+	%TODO add info on volumes and different addressing types in file systems
+		
+%	\section{Hard Disk Technology}
+%		\subsection{Memory Types} %HDD SSD NAND-Flash
+%		\subsection{Forensics Memory Challenges}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{File System Aspects/Categories}
+	\subsection{File System Aspects/Categories}
+	Each files system contains elements from each of the following categores:
+	\begin{itemize}
+		\item File System: \\ Contains file system structure overview and where to find other structures and important data. (fsstat)
+		\item Content: \\ Contains data relating to actual file contents, these are usual organised into containers called data units (block/cluster).
+		\item Meta data: \\ Data that describes files such as access times, file size, users.
+		\item File Name: \\ Contains the data that assigns a name to a file, is used by users instead of a metadata address.
+		\item Application: \\ Special features/additional functionality such as quota data or journalling.	
+	\end{itemize}	    
 \end{frame}
 
 \begin{frame}
-	\frametitle{File System}
-	\section{File Systems}
-		\subsection{File System Types} %ntfs, fat etc.
+	\frametitle{File System Analysis Techniques}
+	\section{File System Analysis Techniques}
+	There are many different techniques and theory for the aforementioned categories. In the respect of time and cope of the lecture I will only cover the ones that are relevant to the lab materials.
+	
 \end{frame}
 
 \begin{frame}

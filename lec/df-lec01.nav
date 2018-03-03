@@ -45,42 +45,42 @@
 \headcommand {\beamer@subsectionentry {0}{5}{3}{13}{Image Types}}\headcommand {\beamer@subsectionpages {1}{12}}
 \headcommand {\slideentry {5}{3}{0}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {6}{Hard Disk Technology}{14}{Hard Disk Technology}{0}}
+\headcommand {\sectionentry {6}{File Systems}{14}{File Systems}{0}}
 \headcommand {\beamer@sectionpages {1}{13}}
 \headcommand {\beamer@subsectionpages {1}{13}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{14}{Memory Types}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\beamer@subsectionentry {0}{6}{2}{14}{Forensics Memory Challenges}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\slideentry {6}{2}{0}{14/14}{}{0}}
+\headcommand {\slideentry {6}{0}{0}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {7}{File Systems}{15}{File Systems}{0}}
-\headcommand {\beamer@sectionpages {1}{14}}
-\headcommand {\beamer@subsectionpages {1}{14}}
-\headcommand {\beamer@subsectionentry {0}{7}{1}{15}{File System Types}}\headcommand {\beamer@subsectionpages {15}{14}}
-\headcommand {\slideentry {7}{1}{0}{15/15}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{15}{File System Aspects/Categories}}\headcommand {\beamer@subsectionpages {1}{14}}
+\headcommand {\slideentry {6}{1}{0}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {8}{The Sleuth Kit (TSK)}{16}{The Sleuth Kit (TSK)}{0}}
+\headcommand {\sectionentry {7}{File System Analysis Techniques}{16}{File System Analysis Techniques}{0}}
 \headcommand {\beamer@sectionpages {1}{15}}
 \headcommand {\beamer@subsectionpages {1}{15}}
-\headcommand {\beamer@subsectionentry {0}{8}{1}{16}{TSK Layers}}\headcommand {\beamer@subsectionpages {16}{15}}
-\headcommand {\slideentry {8}{1}{0}{16/16}{}{0}}
+\headcommand {\slideentry {7}{0}{0}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\sectionentry {9}{Research}{17}{Research}{0}}
+\headcommand {\sectionentry {8}{The Sleuth Kit (TSK)}{17}{The Sleuth Kit (TSK)}{0}}
 \headcommand {\beamer@sectionpages {1}{16}}
 \headcommand {\beamer@subsectionpages {1}{16}}
-\headcommand {\slideentry {9}{0}{0}{17/17}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{17}{TSK Layers}}\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\slideentry {8}{1}{0}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {10}{Additional Resources}{18}{Additional Resources}{0}}
+\headcommand {\sectionentry {9}{Research}{18}{Research}{0}}
 \headcommand {\beamer@sectionpages {1}{17}}
 \headcommand {\beamer@subsectionpages {1}{17}}
-\headcommand {\slideentry {10}{0}{0}{18/18}{}{0}}
+\headcommand {\slideentry {9}{0}{0}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {11}{Careers}{19}{Careers}{0}}
+\headcommand {\sectionentry {10}{Additional Resources}{19}{Additional Resources}{0}}
 \headcommand {\beamer@sectionpages {1}{18}}
 \headcommand {\beamer@subsectionpages {1}{18}}
-\headcommand {\slideentry {11}{0}{0}{19/19}{}{0}}
+\headcommand {\slideentry {10}{0}{0}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {1}{19}}
+\headcommand {\sectionentry {11}{Careers}{20}{Careers}{0}}
 \headcommand {\beamer@sectionpages {1}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\def \inserttotalframenumber {19}}
+\headcommand {\beamer@subsectionpages {1}{19}}
+\headcommand {\slideentry {11}{0}{0}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@partpages {1}{20}}
+\headcommand {\beamer@subsectionpages {1}{20}}
+\headcommand {\beamer@sectionpages {1}{20}}
+\headcommand {\beamer@documentpages {20}}
+\headcommand {\def \inserttotalframenumber {20}}

@@ -40,6 +40,16 @@ Lecture 2:
 
 
 :: LAB IDEAS ::
+
+Digital Forensics Learning Practice Materials:
+https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html
+
+Lab will use one of the removeable medias currenlty looking into Removable Media #2
+https://www.cfreds.nist.gov/data_leakage_case/images/rm%232/cfreds_2015_data_leakage_rm%232.7z (hash: DDFE97AA3D8D0B33CC6092123090A8154945F38E)
+Imaging S/W 	FTK Imager 3.3.0.5 (write-blocked by Tableau USB Bridge T8-R2)
+Image Format 	DD
+
+
 Idea 1:
 Set up a scenario for the users, a client has stated X thing has occured.
 The lab is to develop a case and timeline of events that match the that prove or disprove the hypothesis given.
@@ -47,6 +57,24 @@ Follow digital forensic procedure to reliably recreate the device in question, v
 Use forensic tools to aid completion of the timeline and make a verdict.
 Possibly have small groups each looking at a different device/file system/memory/network traffic.
 Depending on how much time or how indepth lecure was.
+
+Tasks?
+- Identify the file system in use and other information such as data unit size?
+
+
+- Search for string in unallocated space.
+https://wiki.sleuthkit.org/index.php?title=FS_Analysis#Search
+
+
+Recover a deleted file?
+icat
+
+- Find a 'flag' in a damaged data unit? or from a data unit that is marked as bad but is not really?
+
+- store flag in unallocated data and ask them to recover it and tell me what data unit within the file system it was in?
+
+
+
 
 
 :: QUESTIONS FOR MIKE ::

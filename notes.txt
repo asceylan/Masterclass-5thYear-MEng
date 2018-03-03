@@ -94,3 +94,111 @@ Tools Available:
       	    write commands while allowing read commands to pass
       	    though.
 
+
+
+
+What is a File System?
+Definition:
+File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
+
+File System Categories:
+Each files system contains elements from each of the following categores:
+    File System: contains file system structure overview and where to find other strucutres and important data. (fsstat)
+    Content: contains data relating to actual file contents, these are usualy organised into containers called data units (block/cluster).
+    Metadata: data that descripes files such as access times, file size, users.
+    File Name: contains the data that assigns a name to a file, is used by users instead of a metadata address.
+    Application: special features/additional functionality such as quota data or journaling.
+
+TODO: add to lecture
+What is a volume?
+    Logical Volume Address?
+    Logical File System Address?
+
+TODO: add to lecture
+[ENTER SLIDES ON HOW EACH CATERGORIES OPERATES/Nesecary Background info on each category]
+
+TODO: add to lecture
+Content analysis techniques:
+    data unit viewing - knowing where the evidence could be, but not what it is.
+    logical file system-level searching: Looks for a specific value or phrase in a data unit - we know what the content is but not where
+    data unit allocation status - extracting and analysing unallocated data in a file system
+    Consistencey checks (for content): check all alloacated data units have 1 metadata entry, none = orphaned data 2=unusual not allowed in file systems.
+
+TODO: add to lecture
+Metadata analysis Techniques:
+    Metadata Lookup - reading metadata structure inforamation (istat)
+    Logical File Viewing - looking up the data units allocated from metadata and using content lookup to find contents of the file.
+        In TSK, the icat tool allows you to view the contents of the data units that are allocated to a metadata structure. If the -s flag is given, the slack space is shown and the -r flag attempts to recover deleted files.
+    Logical File Searching - searches data units allocated to a meta data entry
+    Unallocated metadata analysis - listing unallocated metadata entries (ils)
+    Metadata attribute searching and sorting - (ifind)
+
+TODO: add to lecture
+File Name Analysis Techniques:
+    File Name Listing: list file and directories looking for data of interest, then investigating futher with metadata techniques like logical file viewing.
+    File Name Searching: when dont know partial name info like file extention.
+
+TODO: add to lecture
+\subsection{File System Types} %ntfs, fat etc.
+
+
+TODO: add to lecture
+The Sleuth Kit (TSK) - http://www.sleuthkit.org/
+tool overview: http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview
+
+The Sleuth Kit (TSK) is series of command line tools and a C library that
+allows a user to analyse disk images and recover files.
+
+TSK provides a series of tools for each of the file system categories mentioned above we will use a collection of the tools in the lab.
+
+
+TODO: add to lecture
+File System Layer Tools:
+fsstat: shows file system details and statistics including layout, sizes and labels
+% either swap to live demo or show annotated print screen explaining information shown
+% give exmaple commands
+
+
+TODO: add to lecture
+File Name Tools
+Allow for processing of file name structures.
+ffind: finds allocated and unallocated file names that point to a given meta data structure
+flsL lists allocated and deleted file names in a directory
+% either swap to live demo or show annotated print screen explaining information shown
+% give exmaple commands
+
+
+TODO: add to lecture
+Meta Data Layer Tools
+icat: Extracts the data units of a file, which is specified by its meta data address.
+ifind: Finds the meta data structure that has a given file name pointing to it or the meta data structure that points to a given data unit.
+ils: Lists the meta data structures and their contents in a pipe delimited format.
+istat: Displays the statistics and details about a given meta data structure in an easy to read format.
+% either swap to live demo or show annotated print screen explaining information shown
+% give exmaple commands
+
+
+TODO: add to lecture
+Data Unit Tools:
+These file system tools process the data units where file content is stored.
+
+blkcat: Extracts the contents of a given data unit.
+blkls: Lists the details about data units and can extract the unallocated space of the file system.
+blkstat: Displays the statistics about a given data unit in an easy to read format.
+blkcalc: Calculates where data in the unallocated space image (from blkls) exists in the original image. This is used when evidence is found in unallocated space.
+% either swap to live demo or show annotated print screen explaining information shown
+% give exmaple commands
+
+
+TODO: add to lecture
+Volume System Tools:
+These tools take a disk (or other media) image as input and analyze its partition structures. 
+
+These can be used find hidden data between partitions and to identify the file system offset.
+
+mmls: Displays the layout of a disk, including the unallocated spaces.
+mmstat: Display details about a volume system (typically only the type).
+mmcat: Extracts the contents of a specific volume to STDOUT.
+% either swap to live demo or show annotated print screen explaining information shown
+% give exmaple commands
+
