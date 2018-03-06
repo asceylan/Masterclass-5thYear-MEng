@@ -74,9 +74,6 @@ icat
 - store flag in unallocated data and ask them to recover it and tell me what data unit within the file system it was in?
 
 
-
-
-
 :: QUESTIONS FOR MIKE ::
 General tips on giving long form talks/lectures?
 How to not lose interest from your audiance?

@@ -30,7 +30,7 @@
 
 
 
-%\subtitle{File System Forensics Masterclass}
+
 \author{Fraser Brown}
 %\institute{Heriot-Watt University}
 \date{\today}
@@ -85,11 +85,9 @@ Your user accounts should have been given access to virtual box in the universit
 	\item Start your Kali VM
 	\end{enumerate*}
 	
-\subsection{Kali Login Information}
-\begin{itemize*}
-	\item username: \texttt{root}
-	\item password: \texttt{toor}
-\end{itemize*}
+\section{Kali Linux Login Information}
+	 username: \texttt{root}
+	 password: \texttt{toor}
 
 \subsection{Note About Root}
 In Kali Linux you are logged in as the root user of the system, therefore the operating system assumes you know what you are doing. Double check the commands you are entering especially if they are related to \texttt{rm}.
@@ -146,14 +144,118 @@ Remove the USB from your machine and return it to the evidence box.
 
 \textit{\textbf{Optional:} enter the hash into the \texttt{findflag} program to receive your first flag.}
 
-\section{Task 2: File System Identification}
-Now that we have a forensic image we can start to analyse the evidence.
+\section{Task 2: File System Information Gathering using TSK}
+Now that we have a forensic image we can start to analyse the evidence, using The Sleuth Kit (TSK).
+
+Commands we will be using to gather information on the system
+\begin{itemize*}
+	\item \textbf{\texttt{mmls}}:\\ \texttt{mmls} displays the layout of the partitions in a volume system, which include partition tables and disk labels.
+	\item \textbf{\texttt{fsstat}}:\\ \texttt{fsstat} displays the details associated with a file system. (requires partition starting point in sectors)
+\end{itemize*}
+
+\subsection*{Find the following Information:}
+Using the tools above and files you currently have (.dd, .info) find the following information: (write it down you will need to reference it later)
+\begin{enumerate*}
+	\item what is the cluster size of the file system?
+	\item what is the sector size of the file system?
+	\item Given that a cluster contains consecutive sectors, how many sectors are in one cluster?
+	\item What partition has content data in it?
+	\item What is the staring point of the File System partition (in sectors)?
+	\item Can you confirm the file system type is fat32 using a TSK tool or other information you have gathered (.info) file?
+\end{enumerate*}
 
 
-\section{Task 3: Deleted File Recovery}
+\section{Task 3: Searching Unallocated Space for Evidence}
+Commands we will be using to gather information on the system
+\begin{itemize*}
+	\item \textbf{\texttt{blkls}}:\\ \texttt{blkls} opens the named image(s) and copies file system data  units  (blocks).   By default,  \texttt{blkls} copies the contents of unallocated data blocks. 
+	\item \textbf{\texttt{fsstat}}:\\ \texttt{fsstat} displays the details associated with a file system. (requires partition starting point in sectors)
+\end{itemize*}
 
-\section{Task 4: Searching Unallocated Space for Evidence}
+\section{Task 4: Deleted File Recovery using Meta Data Pointers}
+Your another member of your digital investigation team has mentioned there is something suspicious with a file called \texttt{progress/my\_friends.svg} that was removed from the file image, they have asked to to check if the deleted file is recoverable and verify the data is of format \texttt{.svg} then compare the recovered data to his found SHA1 hash.
 
+{\noindent
+\textbf{Co-Workers SHA1 hash:}\\
+\texttt{95175c35be9d74ad3e271550e358e634154ba105  progress/my\_friends.svg}
+}
+\subsection*{Commands used in this task}
+\begin{itemize*}
+	\item \textbf{\texttt{fsstat}}:\\ \texttt{fsstat} Displays the details associated with a file system. (requires partition starting point in sectors).
+	\item \textbf{\texttt{fls}}:\\ \texttt{fls} List file and directory names in a disk image, including its associated \textit{inode} number.
+	\item \textbf{\texttt{istat}}:\\ \texttt{istat}  displays the uid, gid, mode, size, link number, modified, accessed, changed times, and all the \textit{disk units} a structure has allocated.
+	\item \textbf{\texttt{blkstat}}: displays the allocation status of the given data unit. 
+	\item \textbf{\texttt{blkls}}:\\ \texttt{blkls} opens  the named image(s) and copies file system data units (blocks).  By default, blkls copies the contents of unallocated data blocks.
+	\item \textbf{\texttt{sha1sum}}: \texttt{sha1sum}	- compute and check SHA1 message digest
+	
+	\item \textbf{\texttt{icat}}: \\ \text{icat} Outputs the content of a file based on its \textit{inode} number according to the details in its meta data pointer.
+	
+	\item \textbf{\texttt{file}}: \text{file} - determine file type
+\end{itemize*}
 
+\subsection*{Talk Walkthrough}
+{\noindent
+\textbf{Task 4.1: List the names and inode info of all deleted files on the image:}\\
+We are looking for a deleted file and have been given a name to find within this .dd image. We know that data in file systems have various pointers for metadata, one of which is a file name pointer. We can use TSK tools that proceed with an \texttt{f} in this instance we want to see all files that were deleted on the data partition, \texttt{fls} will let us do this.\\
+\\
+\verb|# fls -rd -o 128 [path-to-image]|\\
+
+\noindent
+\textbf{4.1 Questions:}
+\begin{enumerate*}
+	\item What is the \textit{iNode Address} for this \texttt{my\_friends.svg}?\\
+\end{enumerate*}
+}
+
+{\noindent
+\textbf{Task 4.2: Based on the inode for my\_friends.svg extract stats on it:}\\
+Using this inode (meta data) pointer, we can gather stats on the data units in question using \texttt{istat}.\\
+\verb|# istat -o 128 [path-to-image]  1651335|\\
+
+\noindent
+\textbf{4.2 Questions:}
+\begin{enumerate*}
+	\item What is the file size of the Image?
+	\item What sector does the data unit start at?
+	\item what sector does the data unit end at?\\
+\end{enumerate*}	
+}
+{\noindent
+\textbf{Task 4.3: Get clusters sectors are in:}\\
+\verb|# blkstat -o 128 [path-to-image]  111408|\\
+\noindent
+\verb|# blkstat -o 128 [path-to-image]  111522|\\
+
+\noindent
+\textbf{4.3 Questions:}
+\begin{enumerate*}
+	\item What is difference between start and end clusters?\\
+\end{enumerate*}	
+}
+{\noindent
+\textbf{Task 4.4: Recover those sectors from unallocated space:}\\
+Given we now know the start and end sectors and have verified that their clusters are not overwritten with other data, we can begin the recovery process.
+\texttt{blkls} will extract all unallocated data units between a given start and end point and write it to a new file (if no points are given it will gather all unallocated space). 
+
+\verb|# blkls -o 128 [path-to-image] > output/recovered-file.blkls|
+}\\
+
+{\noindent
+\textbf{Task 4.4: Calculate hash for recoveredfile.blkls:}\\
+We have successfully recovered the requested file now verify that its hash matches the one our co-worker found as follows:
+\verb|# sha1sum output/recovered-file.blkls|
+}\\
+
+{\noindent
+Verify it is a \texttt{.svg} file with the file command:\\
+\textbf{Task 4.5: Check the file type of the recovered data units:}\\
+\verb|# file output/recoved-file.blkls|\\
+
+\textbf{4.5 Questions:}
+\begin{enumerate*}
+	\item What is actual type of the file?
+	\item Do you know why the file extension contradicts the actual type?\\
+\end{enumerate*}	
+}
 
 \end{document}

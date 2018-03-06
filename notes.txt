@@ -110,6 +110,14 @@ Each files system contains elements from each of the following categores:
     Application: special features/additional functionality such as quota data or journaling.
 
 TODO: add to lecture
+diagram that shows interconnected file system categories
+
+TODO: add to lecture
+metadata pointers (inodes)
+file name pointers
+data units (blocks/clusters) are made up of segments/fragments depending on the files system in use.
+
+TODO: add to lecture
 What is a volume?
     Logical Volume Address?
     Logical File System Address?

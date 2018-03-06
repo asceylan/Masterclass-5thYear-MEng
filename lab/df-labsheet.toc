@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Lab Overview}{2}{section.1}
 \contentsline {section}{\numberline {2}Removable Media Resource Credits}{2}{section.2}
 \contentsline {section}{\numberline {3}Environment Setup}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Kali Login Information}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Note About Root}{3}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Create a Case Directory for Investigation}{3}{subsection.3.3}
-\contentsline {section}{\numberline {4}Task 1: Create a Forensic Image}{4}{section.4}
-\contentsline {section}{\numberline {5}Task 2: File System Identification}{6}{section.5}
-\contentsline {section}{\numberline {6}Task 3: Deleted File Recovery}{6}{section.6}
-\contentsline {section}{\numberline {7}Task 4: Searching Unallocated Space for Evidence}{6}{section.7}
+\contentsline {section}{\numberline {4}Kali Linux Login Information}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Note About Root}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Create a Case Directory for Investigation}{3}{subsection.4.2}
+\contentsline {section}{\numberline {5}Task 1: Create a Forensic Image}{4}{section.5}
+\contentsline {section}{\numberline {6}Task 2: File System Information Gathering using TSK}{6}{section.6}
+\contentsline {section}{\numberline {7}Task 3: Searching Unallocated Space for Evidence}{7}{section.7}
+\contentsline {section}{\numberline {8}Task 4: Deleted File Recovery using Meta Data Pointers}{7}{section.8}
