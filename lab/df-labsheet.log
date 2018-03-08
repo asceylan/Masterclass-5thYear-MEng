@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  6 MAR 2018 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  8 MAR 2018 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,138 +776,298 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 \newpage
+l.54 \newpage
               [1]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 68.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [2]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 83.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+ []
+
+[2]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 84.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-<../figures/guymager-window.png, id=91, 995.72pt x 527.9725pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+<../figures/guymager-window.png, id=99, 995.72pt x 527.9725pt>
 File: ../figures/guymager-window.png Graphic file (type png)
 
 <use ../figures/guymager-window.png>
-Package pdftex.def Info: ../figures/guymager-window.png used on input line 109.
+Package pdftex.def Info: ../figures/guymager-window.png used on input line 113.
 
 (pdftex.def)             Requested size: 497.85878pt x 263.9856pt.
 
-Overfull \hbox (44.89088pt too wide) in paragraph at lines 109--110
+Overfull \hbox (44.89088pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
-[4 <../figures/guymager-window.png>]
-<../figures/guymager-aquisition-window.png, id=99, 665.48625pt x 576.1525pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+<../figures/guymager-aquisition-window.png, id=108, 665.48625pt x 576.1525pt>
 File: ../figures/guymager-aquisition-window.png Graphic file (type png)
 
 <use ../figures/guymager-aquisition-window.png>
 Package pdftex.def Info: ../figures/guymager-aquisition-window.png used on inpu
-t line 126.
+t line 130.
 (pdftex.def)             Requested size: 332.74231pt x 288.07553pt.
- [5 <../figures/guymager-aquisition-window.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../figures/guymager-window.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
+
+ []
+
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 145.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 154.
+[6 <../figures/guymager-aquisition-window.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 152.
- [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 157.
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 213--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--214
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--228
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 239--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--248
+Underfull \hbox (badness 10000) in paragraph at lines 239--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
-
+Overfull \hbox (24.01352pt too wide) in paragraph at lines 239--247
+\OT1/pcr/m/n/10.95 blkcalc -u [SECTOR[]LOCATION] -o [file-system-starting-locat
+ion] [path-to- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 239--247
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
 [9]
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 261.
- (./df-labsheet.xwm)
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+ []
 
-(./df-labsheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--265
+
+ []
+
+
+Overfull \hbox (0.36156pt too wide) in paragraph at lines 256--265
+\OT1/pcr/m/n/10.95 # ifind -a -o [file-system-starting-location] -d [data-unit-
+location]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+
+Overfull \hbox (59.49149pt too wide) in paragraph at lines 269--292
+\OT1/pcr/m/n/10.95 # istat -o [file-system-starting-location] -d [inode-locatio
+n] [path-to-image] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--292
+
+ []
+
+
+Overfull \hbox (46.3515pt too wide) in paragraph at lines 269--292
+\OT1/pcr/m/n/10.95 #icat -o [file-system-starting-location] [path-to-image] [da
+ta-unit-address]
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 318--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
+[12]
+Overfull \hbox (46.3515pt too wide) in paragraph at lines 331--335
+[][]\OT1/pcr/m/n/10.95 # istat -o [file-system-starting-location]  [path-to-ima
+ge]  [inode-address] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Overfull \hbox (33.21152pt too wide) in paragraph at lines 344--350
+\OT1/pcr/m/n/10.95 # blkstat -o [file-system-starting-location] [path-to-image]
+ [start-sector 
+ []
+
+
+Overfull \hbox (20.07153pt too wide) in paragraph at lines 344--350
+\OT1/pcr/m/n/10.95 # blkstat -o [file-system-starting-location] [path-to-image]
+ [end-sector 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+[14]
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 393.
+ (./df-labsheet.xwm) (./df-labsheet.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
 Package rerunfilecheck Info: File `df-labsheet.out' has not changed.
-(rerunfilecheck)             Checksum: E5538E7F9488240A5334C6F95D25D93C;708.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
+(rerunfilecheck)             Checksum: BA672327390DC3CBE7BB873C039C4078;747.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
  ) 
 Here is how much of TeX's memory you used:
- 15492 strings out of 492995
- 249621 string characters out of 6132704
- 401415 words of memory out of 5000000
- 18778 multiletter control sequences out of 15000+600000
+ 15522 strings out of 492995
+ 249997 string characters out of 6132704
+ 401626 words of memory out of 5000000
+ 18788 multiletter control sequences out of 15000+600000
  13262 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,8n,58p,937b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,8n,58p,937b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
@@ -923,10 +1083,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/courier/ucrro8a.pfb>
-Output written on df-labsheet.pdf (10 pages, 257693 bytes).
+Output written on df-labsheet.pdf (15 pages, 276496 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
