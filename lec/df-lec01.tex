@@ -15,8 +15,8 @@
 \titlepage
 \end{frame}
 
-\begin{frame}[shrink]
-\section{Overview}
+\begin{frame}
+\section*{Overview}
 \frametitle{Outline}
 \tableofcontents
 \end{frame}
@@ -40,7 +40,7 @@
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Why File System Analysis?}
-	\section{Why File System Analysis?}
+	\subsection*{Why File System Analysis?}
 	\begin{itemize}
 		\item There are many different forms of digital forensic analysis:
 			\begin{itemize}
@@ -62,9 +62,15 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}% Title Page
+	\section{Forensic Process}
+	\begin{center}
+		\Huge\textbf{Forensic Process}
+	\end{center}
+\end{frame}
+
 \begin{frame}
 	\frametitle{Forensic Process}
-	\section{Forensic Process}
 	Digital forensics results can be used in a court of law therefore accuracy, integrity and an unbiased approach towards evidence is required.\\
 	As a result similar approaches to evidence handling and procedure from traditional forms of forensics are utilised.   
 	\begin{block}{Scientific Method}
@@ -82,7 +88,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Digital Crime Scene Investigation Process Overview}
-	\subsection{Digital Crime Scene Investigation Process Overview}
+	\subsection*{Digital Crime Scene Investigation Process Overview}
 	There are three major areas in digital crime scene investigations:
 	\begin{itemize}
 		\item System Preservation
@@ -98,7 +104,7 @@
 
 \begin{frame}
 	\frametitle{PICL Guidelines}
-	\subsection{PICL Guidelines}
+	\subsection*{PICL Guidelines}
 	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good staring structure:
 	\begin{itemize}
 		\item Preservation:	 Preservation of the system being investigated.
@@ -110,7 +116,7 @@
 
 \begin{frame}
 	\frametitle{Analysis Types}
-	\subsection{Analysis Types}
+	\subsection*{Analysis Types}
 	\begin{block}{Live Analysis:}
 		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier
 	\end{block}
@@ -120,9 +126,15 @@
 	\end{block}
 \end{frame}
 
+\begin{frame} %Title Page
+	\section{Forensic Imaging}
+	\begin{center}
+		\Huge\textbf{Forensic Imaging}
+	\end{center}
+\end{frame}
+
 \begin{frame}
 	\frametitle{Evidence Acquisition/Imaging}
-	\section{Evidence Acquisition/Imaging}
 	\begin{itemize}
 		\item In order to perform analysis on digital artefacts a forensic duplicate of the media must be created.
 		\item Forensic Duplicates are \emph{bit-for-bit} copies of the original disk and can encompass the full disk or a single partition. 
@@ -134,7 +146,7 @@
 
 \begin{frame}
 	\frametitle{Write Blockers}
-	\subsection{Write Blockers}
+	\subsection*{Write Blockers}
 	\begin{block}{Write Blockers}
 			Are hardware or software devices that allow gathering of information without damaging the disk contents by blocking write commands but allowing read commands.
 	\end{block}
@@ -154,7 +166,7 @@
 
 \begin{frame}
 	\frametitle{Imaging Challenges with Solid State Drives (SSD)}
-	\subsection{Imaging Challenges}
+	\subsection*{Imaging Challenges}
 	While an SSD can be imaged with the same tools as a traditional hard disk drive (HDD), there are technology specific issues that cause problems for forensic investigators.
 	\begin{itemize}
 		\item \emph{Program-Erase cycles}
@@ -173,7 +185,7 @@
 
 \begin{frame}
 	\frametitle{Image Types}
-	\subsection{Image Types}
+	\subsection*{Image Types}
 	\begin{itemize}
 		\item Raw Format (\texttt{.dd} \texttt{.raw} \texttt{.img})
 		\begin{itemize}
@@ -189,10 +201,15 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}% Title Page
+	\section{File Systems}
+	\begin{center}
+		\Huge\textbf{File Systems}
+	\end{center}
+\end{frame}
+
 \begin{frame}
 	\frametitle{What are File Systems?}
-	\section{File Systems}
-	% 
 	\begin{block}{File System:}
 		File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
 	\end{block}
@@ -205,38 +222,81 @@
 %		\subsection{Forensics Memory Challenges}
 \end{frame}
 
-
+\begin{frame}
+	\frametitle{File Systems Terminology}
+	\subsection*{File System Terminology}
+	\begin{itemize}
+		\item{\textbf{Sector}}:\\ Section of physical memory which holds static amount of data (512/2048/4096-bytes)
+		\item\textbf{Volume}:\\ 
+		\item\textbf{INode}:\\ Data structure in a file system that contains meta data (a.k.a Meta Data Pointers/Structures)
+		\item\textbf{Data Unit}:\\
+	\end{itemize}
+\end{frame}
 
 \begin{frame}
 	\frametitle{File System Aspects/Categories}
-	\subsection{File System Aspects/Categories}
+	\subsection*{File System Aspects/Categories}
 	Each files system contains elements from each of the following categores:
 	\begin{itemize}
-		\item File System: \\ Contains file system structure overview and where to find other structures and important data. (fsstat)
-		\item Content: \\ Contains data relating to actual file contents, these are usual organised into containers called data units (block/cluster).
-		\item Meta data: \\ Data that describes files such as access times, file size, users.
-		\item File Name: \\ Contains the data that assigns a name to a file, is used by users instead of a metadata address.
-		\item Application: \\ Special features/additional functionality such as quota data or journalling.	
+		\item \textbf{File System}: \\ Contains file system structure overview and where to find other structures and important data. (fsstat)
+		\item \textbf{Content}: \\ Contains data relating to actual file contents, these are usual organised into containers called data units (block/cluster).
+		\item \textbf{Meta data}: \\ Data that describes files such as access times, file size, users.
+		\item \textbf{File Name}: \\ Contains the data that assigns a name to a file, is used by users instead of a metadata address.
+		\item \textbf{Application}: \\ Special features/additional functionality such as quota data or journalling.	
 	\end{itemize}	    
 \end{frame}
 
 \begin{frame}
+	\frametitle{File System Categories Interaction}
+	\begin{figure}[h]
+		\includegraphics[scale=0.40]{fs-category-interaction-briancarrier}
+		\caption{File System Categories Interaction}
+		\label{fig:fs-category-interaction}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{File System Example}
+	\begin{figure}[h]
+		\includegraphics[scale=0.65]{file-system-example}
+		\caption{File System Example}
+		\label{fig:fs-example}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
 	\frametitle{File System Analysis Techniques}
-	\section{File System Analysis Techniques}
-	There are many different techniques and theory for the aforementioned categories. In the respect of time and cope of the lecture I will only cover the ones that are relevant to the lab materials.
-	
+	\section*{File System Analysis Techniques}
+	There are many different techniques and theory for the aforementioned categories. In the respect of time and scope of the lecture I will only cover the ones that are relevant to the lab materials.
+\end{frame}
+
+\begin{frame}% Title Page
+	\section{Forensic Tools}
+	\begin{center}
+		\Huge\textbf{Forensic Tools}
+	\end{center}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Acquisition and Analysis Tools}
-	\section{The Sleuth Kit (TSK)}
-		\subsection{TSK Layers}
+	\subsection*{Guymager}
+	\frametitle{Guymager - Forensic Imaging}
 \end{frame}
 
 \begin{frame}
-	\section{Research}
-	\frametitle{Digital Forensic Research}
+	\subsection*{The Sleuth Kit (TSK)}
+	\frametitle{The Sleuth Kit (TSK)}
+		\subsection*{TSK Layers}
 \end{frame}
+
+\begin{frame}
+	\subsection*{Foremost}
+	\frametitle{Foremost - Data Carving}
+\end{frame}
+
+%\begin{frame}
+%	\section*{Research}
+%	\frametitle{Digital Forensic Research}
+%\end{frame}
 
 \begin{frame}
 	\section{Additional Resources}

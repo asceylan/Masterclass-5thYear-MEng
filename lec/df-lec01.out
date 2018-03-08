@@ -1,19 +1,7 @@
-\BOOKMARK [2][]{Outline0.1}{Overview}{}% 1
-\BOOKMARK [2][]{Outline0.2}{What is Digital Forensics?}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Why File System Analysis?}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Forensic Process}{}% 4
-\BOOKMARK [3][]{Outline0.4.1.7}{Digital Crime Scene Investigation Process Overview}{Outline0.4}% 5
-\BOOKMARK [3][]{Outline0.4.2.8}{PICL Guidelines}{Outline0.4}% 6
-\BOOKMARK [3][]{Outline0.4.3.9}{Analysis Types}{Outline0.4}% 7
-\BOOKMARK [2][]{Outline0.5}{Evidence Acquisition/Imaging}{}% 8
-\BOOKMARK [3][]{Outline0.5.1.11}{Write Blockers}{Outline0.5}% 9
-\BOOKMARK [3][]{Outline0.5.2.12}{Imaging Challenges}{Outline0.5}% 10
-\BOOKMARK [3][]{Outline0.5.3.13}{Image Types}{Outline0.5}% 11
-\BOOKMARK [2][]{Outline0.6}{File Systems}{}% 12
-\BOOKMARK [3][]{Outline0.6.1.15}{File System Aspects/Categories}{Outline0.6}% 13
-\BOOKMARK [2][]{Outline0.7}{File System Analysis Techniques}{}% 14
-\BOOKMARK [2][]{Outline0.8}{The Sleuth Kit \(TSK\)}{}% 15
-\BOOKMARK [3][]{Outline0.8.1.17}{TSK Layers}{Outline0.8}% 16
-\BOOKMARK [2][]{Outline0.9}{Research}{}% 17
-\BOOKMARK [2][]{Outline0.10}{Additional Resources}{}% 18
-\BOOKMARK [2][]{Outline0.11}{Careers}{}% 19
+\BOOKMARK [2][]{Outline0.2}{What is Digital Forensics?}{}% 1
+\BOOKMARK [2][]{Outline0.3}{Forensic Process}{}% 2
+\BOOKMARK [2][]{Outline0.4}{Forensic Imaging}{}% 3
+\BOOKMARK [2][]{Outline0.5}{File Systems}{}% 4
+\BOOKMARK [2][]{Outline0.7}{Forensic Tools}{}% 5
+\BOOKMARK [2][]{Outline0.8}{Additional Resources}{}% 6
+\BOOKMARK [2][]{Outline0.9}{Careers}{}% 7

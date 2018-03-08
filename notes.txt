@@ -101,6 +101,11 @@ What is a File System?
 Definition:
 File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
 
+:Diagram:
+File
+File System
+Volume/partitions (Forensic/Disk Image)
+
 File System Categories:
 Each files system contains elements from each of the following categores:
     File System: contains file system structure overview and where to find other strucutres and important data. (fsstat)
@@ -109,8 +114,8 @@ Each files system contains elements from each of the following categores:
     File Name: contains the data that assigns a name to a file, is used by users instead of a metadata address.
     Application: special features/additional functionality such as quota data or journaling.
 
-TODO: add to lecture
-diagram that shows interconnected file system categories
+:Diagram: 
+showing interconnected file system categories
 
 TODO: add to lecture
 metadata pointers (inodes)

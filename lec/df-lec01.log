@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  2 MAR 2018 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  8 MAR 2018 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,18 +855,14 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./df-lec01.toc)
-
-Class beamer Warning: Frame text is shrunk by a factor of 5.71289 percent inste
-ad of 0 percent on input line 22.
-
-[2
+(./df-lec01.toc) [2
 
 ] [3
 
 ]
 LaTeX Font Info:    Try loading font information for U+msa on input line 63.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 63.
@@ -881,7 +877,7 @@ line 63.
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../figures/digital-data-analysis-layers-BrianCarrier.png, id=220, 947.54pt x 3
+<../figures/digital-data-analysis-layers-BrianCarrier.png, id=152, 947.54pt x 3
 85.44pt>
 File: ../figures/digital-data-analysis-layers-BrianCarrier.png Graphic file (ty
 pe png)
@@ -897,24 +893,24 @@ ng used on input line 63.
 
  <../figures/digital-data-analysis-layers-BrianCarrier.png>] [6
 
+] [7
+
 ]
 \openout4 = `df-lec01.vrb'.
 
 
-(./df-lec01.vrb <../figures/df-guidelines.png, id=301, 325.215pt x 72.27pt>
+(./df-lec01.vrb <../figures/df-guidelines.png, id=263, 325.215pt x 72.27pt>
 File: ../figures/df-guidelines.png Graphic file (type png)
 
 <use ../figures/df-guidelines.png>
 Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
 (pdftex.def)             Requested size: 325.2142pt x 72.2698pt.
-) [7
+) [8
 
- <../figures/df-guidelines.png>] [8
+ <../figures/df-guidelines.png>] [9
 
 ]
-[9
-
-] [10
+[10
 
 ] [11
 
@@ -934,7 +930,54 @@ Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
 
 ] [19
 
-] [20
+]
+<../figures/fs-category-interaction-briancarrier.png, id=590, 824.07875pt x 517
+.935pt>
+File: ../figures/fs-category-interaction-briancarrier.png Graphic file (type pn
+g)
+ <use ../figures/fs-category-interaction-briancarrier.png>
+Package pdftex.def Info: ../figures/fs-category-interaction-briancarrier.png us
+ed on input line 256.
+(pdftex.def)             Requested size: 329.62566pt x 207.17032pt.
+
+Overfull \vbox (12.10828pt too high) detected at line 256
+ []
+
+[20
+
+ <../figures/fs-category-interaction-briancarrier.png>]
+<../figures/file-system-example.png, id=619, 551.05875pt x 288.17662pt>
+File: ../figures/file-system-example.png Graphic file (type png)
+
+<use ../figures/file-system-example.png>
+Package pdftex.def Info: ../figures/file-system-example.png used on input line 
+265.
+(pdftex.def)             Requested size: 358.18393pt x 187.31258pt.
+
+Overfull \hbox (15.88863pt too wide) in paragraph at lines 265--265
+ [] 
+ []
+
+
+Overfull \vbox (5.85054pt too high) detected at line 265
+ []
+
+[21
+
+ <../figures/file-system-example.png>] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+]
+[28
 
 ]
 \tf@nav=\write6
@@ -946,13 +989,13 @@ Package pdftex.def Info: ../figures/df-guidelines.png used on input line 10.
 \tf@snm=\write8
 \openout8 = `df-lec01.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
  (./df-lec01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `df-lec01.out' has not changed.
-(rerunfilecheck)             Checksum: 90D78E276DBACD3ADF8E499B8E21FF1A;1159.
+(rerunfilecheck)             Checksum: 85CE12F8581093E89D5EB69CEEC07385;356.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -960,23 +1003,25 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 17337 strings out of 492995
- 333731 string characters out of 6132704
- 404534 words of memory out of 5000000
- 20425 multiletter control sequences out of 15000+600000
- 9803 words of font info for 36 fonts, out of 8000000 for 9000
+ 17359 strings out of 492995
+ 333695 string characters out of 6132704
+ 401568 words of memory out of 5000000
+ 20422 multiletter control sequences out of 15000+600000
+ 10697 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,62p,793b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,60p,793b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on df-lec01.pdf (20 pages, 427268 bytes).
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
+>
+Output written on df-lec01.pdf (28 pages, 857592 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 648 compressed objects within 7 object streams
- 61 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 879 PDF objects out of 1000 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
