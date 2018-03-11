@@ -208,11 +208,32 @@
 	\end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
 	\frametitle{What are File Systems?}
 	\begin{block}{File System:}
 		File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
 	\end{block}
+	
+	\begin{itemize}
+		\item File system architectures (FAT32, Ext3 etc.) provide different methods of tracking data on physical media each has their own data structures, look up tables and allocation methods. \\
+		
+		\item Modern operating systems contain support for many different file systems providing an interface with physical storage. 
+	\end{itemize}
+	
+	\newpage
+	File systems are made up of 2/3 layers:
+	\begin{enumerate}
+		\item\textbf{Logical Layer}: Provides a user application level API for commands such as read, write and chmod etc.
+		\item\textbf{Virtual Layer}\textit{optional}: Allows access to multiple physical file systems e.g. block based: FAT32, NTFS or network based: NFS
+		\item\textbf{Physical Layer}: Interacts with hardware, performing block and memory management and interacting with device drivers etc.
+	\end{enumerate}
+	
+	\begin{figure}[h]
+		\includegraphics[scale=0.5]{abstract-fs-diagram}
+		\caption{Abstract Diagram of a File System on a Computer}
+		\label{fig:abstract-fs-diagram}	
+	\end{figure}
+
 	
 	%TODO enter diagram of how file system interacts with os and hardware
 	%TODO add info on volumes and different addressing types in file systems
@@ -226,22 +247,22 @@
 	\frametitle{File Systems Terminology}
 	\subsection*{File System Terminology}
 	\begin{itemize}
-		\item{\textbf{Sector}}:\\ Section of physical memory which holds static amount of data (512/2048/4096-bytes)
-		\item\textbf{Volume}:\\ 
+		\item{\textbf{Sector}}:\\ Smallest addressable section of memory, which holds static amount of data (512/2048/4096-bytes)
+		%\item\textbf{Volume}:\\ 
 		\item\textbf{INode}:\\ Data structure in a file system that contains meta data (a.k.a Meta Data Pointers/Structures)
-		\item\textbf{Data Unit}:\\
+		\item\textbf{Data Unit}:\\ Standard sized container for storing \textit{content} data,which consists of multiple \textbf{sectors}. Different file systems have different names for these data units e.g. (Cluster or Block). 
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{File System Aspects/Categories}
-	\subsection*{File System Aspects/Categories}
-	Each files system contains elements from each of the following categores:
+	\subsection*{File System Categories}
+	Each file system contains elements from the following categories:
 	\begin{itemize}
-		\item \textbf{File System}: \\ Contains file system structure overview and where to find other structures and important data. (fsstat)
+		\item \textbf{File System}: \\ Contains file system structure overview and where to find other structures and important data.
 		\item \textbf{Content}: \\ Contains data relating to actual file contents, these are usual organised into containers called data units (block/cluster).
 		\item \textbf{Meta data}: \\ Data that describes files such as access times, file size, users.
-		\item \textbf{File Name}: \\ Contains the data that assigns a name to a file, is used by users instead of a metadata address.
+		\item \textbf{File Name}: \\ Contains the data that assigns a name to a file, is used by users instead of a meta data address.
 		\item \textbf{Application}: \\ Special features/additional functionality such as quota data or journalling.	
 	\end{itemize}	    
 \end{frame}
@@ -256,12 +277,42 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{File System Example}
+	\frametitle{File System Categories By Example}
 	\begin{figure}[h]
 		\includegraphics[scale=0.65]{file-system-example}
 		\caption{File System Example}
 		\label{fig:fs-example}
 	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{File System Architectures}
+	\section*{File System Architectures}
+	There are numerous file system architectures available, some are operating system specific others are designed to be more universal. \\
+	
+	Examples include:
+	\begin{itemize}
+		\item FAT - File Allocation Table (FAT8/16/32) - Commonly found on Removable Media 
+		\item NTFS - New Technology File System - Default For Windows
+		\item Ext - Extended File System (Ext2/3/4) - Default for Linux
+	\end{itemize}
+	
+	
+	We will focus on FAT32 in this lecture due to the lab being structured around applying forensic techniques on removable media.
+\end{frame}
+
+\begin{frame}
+	\frametitle{File Allocation Table 32 - FAT32}
+	\section*{File Allocation Table 32 - FAT32}
+	There are 
+\end{frame}
+
+
+\begin{frame}% Title Page
+	\section{File System Analysis}
+	\begin{center}
+		\Huge\textbf{File System Analysis}
+	\end{center}
 \end{frame}
 
 \begin{frame}
@@ -273,24 +324,110 @@
 \begin{frame}% Title Page
 	\section{Forensic Tools}
 	\begin{center}
-		\Huge\textbf{Forensic Tools}
+		\Huge\textbf{Forensic Tools}\\
+		\large\textit{(Used in Accompanying Lab)}
 	\end{center}
 \end{frame}
 
 \begin{frame}
-	\subsection*{Guymager}
 	\frametitle{Guymager - Forensic Imaging}
-\end{frame}
-
-\begin{frame}
-	\subsection*{The Sleuth Kit (TSK)}
-	\frametitle{The Sleuth Kit (TSK)}
-		\subsection*{TSK Layers}
+	\subsection*{Guymager}
+	\begin{block}{Guymager}
+		Guymager is a GUI based forensic imaging tool, that allows for the creation of various image types such as Raw (dd) and EnCase (E01).
+	\end{block}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{guymager-window}
+		\caption{\textit{guymager gui window example}}
+		\label{fig:guymager-main-window}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\subsection*{Foremost}
 	\frametitle{Foremost - Data Carving}
+	\begin{block}{Foremost}
+		Foremost is a command line tool that utilises data carving techniques to recover files.
+	\end{block}
+	\begin{itemize}
+		\item \textbf{Data Carving} is a process where files are recovered from a disk image based on common information such as file headers, footers and data structures. 
+		\item Performing data carving for large forensic images can be rather tedious if done by hand, tools such as \textbf{Foremost} have been developed to help digital forensic investigators automating this process.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\subsection*{The Sleuth Kit (TSK)}
+	\frametitle{The Sleuth Kit (TSK)\footnote{http://www.sleuthkit.org/}}
+	\begin{block}{The Sleuth Kit (TSK)}
+	The Sleuth Kit is a series of command line tools that allow users to inspect and analyse disk images and the file systems therein.
+	\end{block}
+	\begin{itemize}
+		\item The tools provided in TSK are divided into the 5 file system categories discussed previously, file system, content (data unit), meta data, file name.
+		\item Due to the wide variety of tools within TSK I will discuss those of which we will use in the accompanying lab.
+		\item Other features of TSK can befound in the tool overview: \url{http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{TSK - File System Layer Tools}
+	\subsection*{TSK - File System Layer Tools}
+	\begin{itemize}
+		\item \textbf{fsstat}: shows file system details and statistics including layout, sizes and labels
+	\end{itemize}	
+	% either swap to live demo or show annotated print screen explaining information shown
+	% give exmaple commands
+\end{frame}
+
+\begin{frame}
+	\frametitle{TSK - File Name Tools}
+	\subsection*{TSK -File Name Tools}
+	Allow for processing of file name structures.
+	\begin{itemize}
+		\item \textbf{ffind}: finds allocated and unallocated file names that point to a given meta data structure
+		\item \textbf{fls} lists allocated and deleted file names in a directory
+	\end{itemize}		
+	% either swap to live demo or show annotated print screen explaining information shown
+	% give exmaple commands
+\end{frame}
+
+\begin{frame}
+	\frametitle{TSK - Meta Data Layer Tools}
+	\subsection*{TSK - Meta Data Layer Tools}
+	\begin{itemize}
+		\item \textbf{icat}: Extracts the data units of a file, which is specified by its meta data address.
+		\item \textbf{ifind}: Finds the meta data structure that has a given file name pointing to it or the meta data structure that points to a given data unit.
+		\item \textbf{ils}: Lists the meta data structures and their contents in a pipe delimited format.
+		\item \textbf{istat}: Displays the statistics and details about a given meta data structure in an easy to read format.
+	\end{itemize}
+	% either swap to live demo or show annotated print screen explaining information shown
+	% give exmaple commands
+\end{frame}
+
+\begin{frame}
+	\frametitle{TSK - Data Unit Tools}
+	\subsection*{TSK - Data Unit Tools}
+	These file system tools process the data units where file content is stored.
+	\begin{itemize}
+		\item \textbf{blkcat}: Extracts the contents of a given data unit.
+		\item \textbf{blkls}: Lists the details about data units and can extract the unallocated space of the file system.
+		\item \textbf{blkstat}: Displays the statistics about a given data unit in an easy to read format.
+		\item \textbf{blkcalc}: Calculates where data in the unallocated space image (from blkls) exists in the original image. This is used when evidence is found in unallocated space.
+	\end{itemize}
+	% either swap to live demo or show annotated print screen explaining information shown
+	% give exmaple commands
+\end{frame}
+
+\begin{frame}
+	\frametitle{TSK - Volume System Tools}
+	\subsection*{TSK - Volume System Tools}
+	These tools take a disk (or other media) image as input and analyse its partition structures. 
+	\begin{itemize}
+		\item \textbf{mmls}: Displays the layout of a disk, including the unallocated spaces.
+		\item \textbf{mmstat}: Display details about a volume system (typically only the type).
+		\item \textbf{mmcat}: Extracts the contents of a specific volume to STDOUT.
+	\end{itemize}
+	% either swap to live demo or show annotated print screen explaining information shown
+	% give exmaple commands
 \end{frame}
 
 %\begin{frame}

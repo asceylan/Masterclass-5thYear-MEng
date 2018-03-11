@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#take in first command argument as evidence
+if [ ${#} == 1 ]; then
+    ev="$1"
+else
+    echo "To many evidence arguemnts given please try again"
+fi
+
+# todo: generate flags for Task1 (all usbs) Task 1
+# todo: generate flag recognition for Task 2
+# todo: generate flag recognition for Task 3
+# todo: generate flag recognition for Task 4
+# todo: generate flag recognition for Task 5

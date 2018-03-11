@@ -155,7 +155,6 @@ TODO: add to lecture
 \subsection{File System Types} %ntfs, fat etc.
 
 
-TODO: add to lecture
 The Sleuth Kit (TSK) - http://www.sleuthkit.org/
 tool overview: http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview
 
@@ -165,14 +164,12 @@ allows a user to analyse disk images and recover files.
 TSK provides a series of tools for each of the file system categories mentioned above we will use a collection of the tools in the lab.
 
 
-TODO: add to lecture
 File System Layer Tools:
 fsstat: shows file system details and statistics including layout, sizes and labels
 % either swap to live demo or show annotated print screen explaining information shown
 % give exmaple commands
 
 
-TODO: add to lecture
 File Name Tools
 Allow for processing of file name structures.
 ffind: finds allocated and unallocated file names that point to a given meta data structure
@@ -181,7 +178,6 @@ flsL lists allocated and deleted file names in a directory
 % give exmaple commands
 
 
-TODO: add to lecture
 Meta Data Layer Tools
 icat: Extracts the data units of a file, which is specified by its meta data address.
 ifind: Finds the meta data structure that has a given file name pointing to it or the meta data structure that points to a given data unit.
@@ -191,7 +187,6 @@ istat: Displays the statistics and details about a given meta data structure in 
 % give exmaple commands
 
 
-TODO: add to lecture
 Data Unit Tools:
 These file system tools process the data units where file content is stored.
 
@@ -203,7 +198,6 @@ blkcalc: Calculates where data in the unallocated space image (from blkls) exist
 % give exmaple commands
 
 
-TODO: add to lecture
 Volume System Tools:
 These tools take a disk (or other media) image as input and analyze its partition structures. 
 
