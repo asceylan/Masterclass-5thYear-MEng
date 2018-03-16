@@ -2,7 +2,7 @@
 \beamer@sectionintoc {3}{Forensic Process}{6}{0}{2}
 \beamer@sectionintoc {4}{Forensic Imaging}{11}{0}{3}
 \beamer@sectionintoc {5}{File Systems}{16}{0}{4}
-\beamer@sectionintoc {8}{File System Analysis}{26}{0}{5}
-\beamer@sectionintoc {10}{Forensic Tools}{28}{0}{6}
-\beamer@sectionintoc {11}{Additional Resources}{37}{0}{7}
-\beamer@sectionintoc {12}{Careers}{38}{0}{8}
+\beamer@sectionintoc {8}{Forensic Tools}{28}{0}{5}
+\beamer@sectionintoc {9}{File System Analysis Example}{32}{0}{6}
+\beamer@sectionintoc {11}{Additional Resources}{49}{0}{7}
+\beamer@sectionintoc {12}{Careers}{50}{0}{8}

@@ -1,6 +1,10 @@
 \documentclass{beamer}
 \usetheme{Boadilla}
 
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{tikz}
+
 \title{Digital Forensics}
 \subtitle{File System Forensics Masterclass}
 \author{Fraser Brown}
@@ -8,6 +12,23 @@
 \date{\today}
 
 \graphicspath{{../figures/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Overlay Generator - Annotated Figures v0.0.1
+% Created with http://ff.cx/latex-overlay-generator/
+% If this generator saves you time, consider donating 5,- EUR! :-)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\annotatedFigureBoxCustom{bottom-left}{top-right}{label}{label-position}{box-color}{label-color}{border-color}{text-color}
+\newcommand*\annotatedFigureBoxCustom[8]{\draw[#5,thin,rounded corners] (#1) rectangle (#2);\node at (#4) [fill=#6,thick,shape=circle,draw=#7,inner sep=0.5,font=\sffamily,text=#8] {\tiny #3};}
+%\annotatedFigureBox{bottom-left}{top-right}{label}{label-position}
+\newcommand*\annotatedFigureBox[4]{\annotatedFigureBoxCustom{#1}{#2}{#3}{#4}{white}{white}{black}{black}}
+\newcommand*\annotatedFigureText[4]{\node[draw=none, anchor=south west, text=#2, inner sep=0, text width=#3\linewidth, font=\sffamily] at (#1){\tiny #4};}
+\newenvironment {annotatedFigure}[1]{\centering\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) { #1};\begin{scope}[x={(image.south east)},y={(image.north west)}]}{\end{scope}\end{tikzpicture}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{document}
 
@@ -215,7 +236,7 @@
 	\end{block}
 	
 	\begin{itemize}
-		\item File system architectures (FAT32, Ext3 etc.) provide different methods of tracking data on physical media each has their own data structures, look up tables and allocation methods. \\
+		\item File system architectures (FAT32, Ext3 etc.) provide different methods of tracking data on physical media, each has their own data structures, look up tables and allocation methods. \\
 		
 		\item Modern operating systems contain support for many different file systems providing an interface with physical storage. 
 	\end{itemize}
@@ -233,14 +254,7 @@
 		\caption{Abstract Diagram of a File System on a Computer}
 		\label{fig:abstract-fs-diagram}	
 	\end{figure}
-
 	
-	%TODO enter diagram of how file system interacts with os and hardware
-	%TODO add info on volumes and different addressing types in file systems
-		
-%	\section{Hard Disk Technology}
-%		\subsection{Memory Types} %HDD SSD NAND-Flash
-%		\subsection{Forensics Memory Challenges}
 \end{frame}
 
 \begin{frame}
@@ -255,9 +269,9 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{File System Aspects/Categories}
-	\subsection*{File System Categories}
-	Each file system contains elements from the following categories:
+	\frametitle{File System Data Categories}
+	\subsection*{File System Data Categories}
+	All data in a file system belongs to a data category listed below. This abstract view will be useful for analysing different elements of a file system for evidence and for visualising structures that make up a file on disk.
 	\begin{itemize}
 		\item \textbf{File System}: \\ Contains file system structure overview and where to find other structures and important data.
 		\item \textbf{Content}: \\ Contains data relating to actual file contents, these are usual organised into containers called data units (block/cluster).
@@ -289,38 +303,58 @@
 	\frametitle{File System Architectures}
 	\section*{File System Architectures}
 	There are numerous file system architectures available, some are operating system specific others are designed to be more universal. \\
-	
+	\vspace{\baselineskip}
 	Examples include:
 	\begin{itemize}
-		\item FAT - File Allocation Table (FAT8/16/32) - Commonly found on Removable Media 
-		\item NTFS - New Technology File System - Default For Windows
-		\item Ext - Extended File System (Ext2/3/4) - Default for Linux
+		\item \textbf{FAT} - File Allocation Table (FAT8/16/32) - \textit{Commonly found on Removable Media} 
+		\item \textbf{NTFS} - New Technology File System - \textit{Default For Windows}
+		\item \textbf{Ext} - Extended File System (Ext2/3/4) - \textit{Default for Linux}
 	\end{itemize}
-	
-	
-	We will focus on FAT32 in this lecture due to the lab being structured around applying forensic techniques on removable media.
+		\vspace{\baselineskip}
+	We will focus on FAT32 in this lecture due to the lab being structured around applying forensic techniques on FAT32 formatted removable media.
 \end{frame}
 
 \begin{frame}
-	\frametitle{File Allocation Table 32 - FAT32}
-	\section*{File Allocation Table 32 - FAT32}
-	There are 
+	\frametitle{File Allocation Table (FAT) Hisotry}
+	\section*{File Allocation Table - FAT32}
+	\begin{itemize}
+		\item File Allocation Table (FAT) file system is a simplistic file system developed for Windows DOS and Windows 9* operating systems. 
+		\vspace{\baselineskip}
+		\item FAT is supported by both windows and Unix OS's. 
+		\vspace{\baselineskip}
+		\item FAT was replaced by NTFS as the primary file system of windows in XP era, FAT is now mainly used in SD Cards and USB flash drives.
+		\vspace{\baselineskip}
+		\item FAT has been extended from the original 8 bit to 32 bit and had derivatives made from it such as exFAT and FAT+
+	\end{itemize}	
 \end{frame}
 
-
-\begin{frame}% Title Page
-	\section{File System Analysis}
-	\begin{center}
-		\Huge\textbf{File System Analysis}
-	\end{center}
+\begin{frame}[allowframebreaks]
+	\frametitle{FAT32 - Information}
+	\subsection*{FAT32}
+	\begin{itemize}
+		\item Data Units are called \textbf{\textit{Clusters}}
+		\item Increased cluster size over FAT8/FAT16 architectures, due to being stored as 32bit values.
+		\item FAT32 has two overarching data structures:
+			\begin{itemize}
+				\item \textbf{File Allocaiton Table}: \\
+				Stores next cluster for a given file, holds allocation status of clusters.
+				\item \textbf{Directory Entries}:\\
+				One per file/directory which contains: file name , size, starting address of content and other metadata.
+			\end{itemize}
+		\item The \textit{first cluster address} starts at 2. 
+		\item \textbf{\textit{Calculate Sector Address}} of Cluster C:\\ 
+			$(C-2)\times (NumberSectorsPerCluster) + (SectorOfCluster2)$
+		\item \textit{Calculate cluster address} from sector address S:\\
+			$((S – SectorOfCluster2) / (NumberSectorsPerClusterr)) + 2$
+	\end{itemize}
+	\newpage
+	Physical Layout of a FAT FS:
+	\begin{figure}
+		\includegraphics[scale=0.8]{fat-phys-layout}
+		\caption{FAT Physical Layout}
+		\label{fig:fat-phys-layout}
+	\end{figure}
 \end{frame}
-
-\begin{frame}
-	\frametitle{File System Analysis Techniques}
-	\section*{File System Analysis Techniques}
-	There are many different techniques and theory for the aforementioned categories. In the respect of time and scope of the lecture I will only cover the ones that are relevant to the lab materials.
-\end{frame}
-
 \begin{frame}% Title Page
 	\section{Forensic Tools}
 	\begin{center}
@@ -368,7 +402,177 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}% Title Page
+	\section{File System Analysis Example}
+	\begin{center}
+		\Huge\textbf{File System Analysis}\\
+		\large\textit{(By Practical Example)}
+	\end{center}
+\end{frame}
+
 \begin{frame}
+	\frametitle{Note About File System Analysis Techniques}
+	\section*{File System Analysis Techniques}
+	There are many different analysis techniques for each of the aforementioned file system data categories. In the respect of time and scope of the lecture I will only cover the ones that are relevant to the lab materials.
+	
+	\vspace{\baselineskip}
+	
+	You may also notice that sometimes the same analysis technique (logical file system searching and viewing) are doable from different categories in a file system. This added redundancy means effective analysis can be performed even if certain data structures don't exists or were removed.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Initial Volume / Disk Image Enumeration - \texttt{mmls}}
+	Before we can get into recovering files or gathering evidence we have to understand the problem space we are working in. TSK provides volume system level tools to aid with this. \texttt{mmls} allows us to display the layout of a disk image/volume.
+	\begin{figure}[h!t]
+		\begin{annotatedFigure}
+			{\includegraphics[width=1.0\linewidth]{mmls-output.png}}
+			\annotatedFigureBox{0.167,0.6007}{0.3985,0.7417}{B}{0.167,0.6007}%bl
+			\annotatedFigureBox{0.202,0.1762}{0.3595,0.2862}{C}{0.202,0.1762}%bl
+			\annotatedFigureBox{0.7345,0.1789}{0.9845,0.2797}{A}{0.7345,0.1789}%bl
+			%\annotatedFigureBox{0.001,0.8045}{0.0435,0.9244}{A}{0.0435,0.9244}%tr
+		\end{annotatedFigure}
+		
+		\caption{\textbf{Initial Volume / Disk Image Enumeration} -- File System Type (A), Unit type output is in (B) Starting Sector of File System (C).}
+		\label{fig:mmls-output}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{File System Information Gathering - \texttt{fsstat}}
+	\begin{figure}[h!t]
+		\begin{minipage}[c]{0.6\textwidth}
+			\begin{annotatedFigure}
+				{\includegraphics[scale=0.3]{fsstat-output.png}}
+					\annotatedFigureBox{-0.0027,0.8905}{0.3133,0.9345}{A}{0.3133,0.8905}%br
+					\annotatedFigureBox{-0.0028,0.6505}{0.4153,0.688}{B}{0.4153,0.688}%tr
+					\annotatedFigureBox{-0.0032,0.3505}{0.4371,0.632}{C}{0.4371,0.3505}%br
+					\annotatedFigureBox{0.0009,0.0865}{0.4343,0.1745}{D}{0.4343,0.0865}%br
+					\annotatedFigureBox{0.3938,0.7705}{0.5257,0.8125}{E}{0.5257,0.7705}%br
+			\end{annotatedFigure}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.37\textwidth}
+			Using TSK's \texttt{fsstat} command with the offset of the file system (-o 128) we are able to view information from three of our FS categories (\textit{file system, metadata, and content}).\\
+
+			\caption{\textbf{File System Info} -- (A) File System Type,\hspace{\textwidth}(B) FS starting Sector,\hspace{\textwidth}(C) FS Layout,\hspace{\textwidth}  (D) Sector {\&} Cluster Address sizes and Cluster Range.\hspace{\textwidth} (E) Root Directory of Volume, name of user.}
+			\label{fig:fsstat-output}
+		\end{minipage}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{File Name Information Gathering - \texttt{fls}}
+We can extract all the file name pointers, and associated \textit{inode} addresses for files and directories in our disk image.
+\begin{figure}[h!t]
+\begin{annotatedFigure}
+	{\includegraphics[scale=0.38]{fls-output.png}}
+	\annotatedFigureBox{-0.0005,0.7794}{0.2815,0.8739}{A}{0.2815,0.8739}%tr
+	\annotatedFigureBox{0.117,0.4655}{0.197,0.5295}{B}{0.117,0.4655}%bl
+	\annotatedFigureBox{0.4345,0.9481}{0.4702,1.0014}{C}{0.4345,0.9481}%bl
+	\annotatedFigureBox{0.207,0.7355}{0.3655,0.7758}{D}{0.3655,0.7758}%tr
+	\annotatedFigureBox{0.0815,0.298}{0.1132,0.3592}{E}{0.1132,0.3592}%tr
+\end{annotatedFigure}
+
+\caption{\textbf{File Name Info} -- FAT Tables from physical structure (A), inode address (B), recursively print all file names (C), Unallocated or no longer present files directory - Orphaned Files (D), deleted file indicator (E)}
+\label{fig:fls-output}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Metadata Structure Analysis - \texttt{istat}}
+TSK commands starting with an \texttt{i} allow for metadata structure analysis. \texttt{istat} provides metadata details on a particular file given its inode address.
+\begin{figure}[h!t]
+\begin{annotatedFigure}
+	{\includegraphics[scale=0.3]{istat-ouput.png}}
+	\annotatedFigureBox{0.7875,0.9513}{0.8613,0.9987}{A}{0.8613,0.9513}%br
+	\annotatedFigureBox{-0.002,0.872}{0.1485,0.9192}{B}{0.1485,0.872}%br
+	\annotatedFigureBox{0.0005,0.7893}{0.1495,0.8426}{C}{0.1495,0.7893}%br
+	\annotatedFigureBox{-0.002,0.5467}{0.4358,0.721}{D}{0.4358,0.721}%tr
+	\annotatedFigureBox{-0.0015,0.438}{0.0605,0.4863}{E}{0.0605,0.438}%br
+	\annotatedFigureBox{0.4345,0.0523}{0.4965,0.0949}{F}{0.4965,0.0949}%tr
+\end{annotatedFigure}
+\caption{\textbf{Metadata Structure info} --  use of inode(A), related file has been deleted (B), file size (C) creation and access times (D), start sector of previously attached data (E), end sector of previously attached data(F).}
+\label{fig:istat-output}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Investigation Sit-rep}
+What information have we gathered about this disk image?
+\begin{itemize}
+\item \textit{File System Architecture:} FAT32
+\item \textit{FS starting sector:} 128
+\item \textit{Sector ranges for data area clusters:} 8192 to 2097151
+\item \textit{Sector Size:} 512
+\item \textit{Cluster size:} 4096
+\item File names for all deleted files in the FS and their inode numbers
+\item Sector Start and End points for any deleted file
+\item When the files were created, written and accessed last. (importance of write blockers, and helps with event time-lines).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{File Recovery From Metadata Structure - \texttt{icat}}
+Given the above gathered infomation we can now recover a file, this method uses the data within the metadata structure (inode) to recover the file from disk. 
+\begin{figure}[h!t]
+\begin{annotatedFigure}
+	{\includegraphics[width=1.0\linewidth]{icat-recovery-output.png}}
+	\annotatedFigureBox{-0.0005,0.5799}{0.6505,0.8769}{A}{0.6505,0.5799}%br
+	\annotatedFigureBox{-0.006,0.1266}{0.5955,0.4425}{B}{0.5955,0.1266}%br
+\end{annotatedFigure}
+\caption{\textbf{File Recovery Using Metadata Structure} -- data recovered to file in our OS (A), file type is actually excel, not jpg (B).}
+\label{fig:icat-recovery-output}
+\end{figure}
+\vspace{\baselineskip}
+
+\textit{NOTE:} manual extraction of this file using sector to cluster address conversions and TSK data unit tools (\texttt{blk}*) is possible. This helps when data structures are partial or areas have been overwritten and will be explored in the lab.
+
+	\begin{figure}[h!t]
+		{\includegraphics[width=1.0\linewidth]{lecrecovered-open}}
+		\caption{Opened Recovered File}
+		\label{fig:lecrecovered-open}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Content Analysis}
+\subsection*{Content Analysis}
+	\begin{itemize}
+		\item \textbf{Data Unit Viewing:} View information in a data unit. We know \textit{where} the evidence could be, but \textbf{not} \textit{what} it is.
+		\item \textbf{Logical FS level Searching:} Looks for a specific value or phrase in a \textit{data unit}. We know \textit{what} the content is but \textbf{not} \textit{where}
+		\item \textbf{Data Unit Allocation Status:} Verification of each data units status %xtracting and analysing unallocated data in a file system
+		\item \textbf{Consistency Check:} Check all allocated data units have 1 metadata entry.\\
+		none = orphaned data\\
+		2 = unusual {\&} not allowed in file systems.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Metadata Analysis}
+\subsection*{Metadata Analysis}
+	\begin{itemize}
+		\item \textbf{Metadata Lookup:} Reading metadata structure information (istat)
+		\item \textbf{Logical File Viewing (data unit):} Looking up the \textit{data units} allocated from metadata and using content lookup to find contents of the file.
+			\begin{itemize}
+				\item In TSK, the icat tool allows you to view the contents of the data units that are allocated to a metadata structure.\\ 
+				-s flag is given, the slack space is shown\\
+				-r flag attempts to recover deleted files.
+			\end{itemize}
+    		\item \textbf{Logical File Searching:} Searches \textit{data units} allocated to a metadata entry
+    		\item \textbf{Unallocated Metadata Analysis:} Listing unallocated metadata entries (ils)
+    		\item \textbf{Metadata Attribute Aearching {\&} Sorting}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{File Name Analysis}
+	\subsection*{File Name Analysis}
+	\begin{itemize}
+		\item \textbf{File Name Listing:} List file and directories looking for data of interest, then investigating further with metadata techniques like logical file viewing.
+		\item \textbf{File Name Searching:} If we don't know partial name info like file extension.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
 	\frametitle{TSK - File System Layer Tools}
 	\subsection*{TSK - File System Layer Tools}
 	\begin{itemize}
@@ -430,21 +634,32 @@
 	% give exmaple commands
 \end{frame}
 
-%\begin{frame}
-%	\section*{Research}
-%	\frametitle{Digital Forensic Research}
-%\end{frame}
-
 \begin{frame}
 	\section{Additional Resources}
 	\frametitle{Additional Resources}
-	
+	\begin{itemize}
+	\item \textbf{Books}:
+		\begin{itemize}
+			\item File System Forensic Analysis- Brian Carrier - \url{http://amzn.eu/1R9U4bz}
+			\item Practical Forensic Imaging - Bruce Nikkel - \url{http://amzn.eu/5y057Ba}
+		\end{itemize}
+	\item \textbf{Reddit}: r/computerforensics \url{https://www.reddit.com/r/computerforensics/wiki/faq}
+	\item \textbf{DFRWS Conference}: https://www.dfrws.org/
+	\item \textbf{SANS DFIR}:
+		\begin{itemize}
+			\item \textbf{Blog}: \url{https://digital-forensics.sans.org/blog}
+			\item \textbf{Crib Sheets/Posters}: \url{https://digital-forensics.sans.org/community/cheat-sheets}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\section{Careers}
 	\frametitle{Careers}
-	
+	\section{Careers}
+	\begin{itemize}
+		\item \textbf{GHCQ} - Internet and Systems Investigation: Forensic Technologist\footnote{https://recruitmentservices.applicationtrack.com/vx/lang-en-GB/mobile-0/appcentre-3/brand-2/xf-bd8ab30ccf84/candidate/so/pm/1/pl/6/opp/1268}
+		\item \textbf{Cyfor} - eDiscovery Digital Forensics and Cyber Security - \url{https://cyfor.co.uk/careers/}
+	\end{itemize}
 \end{frame}
 
 \end{document} % End Document

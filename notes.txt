@@ -122,22 +122,18 @@ metadata pointers (inodes)
 file name pointers
 data units (blocks/clusters) are made up of segments/fragments depending on the files system in use.
 
-TODO: add to lecture
 What is a volume?
     Logical Volume Address?
     Logical File System Address?
 
-TODO: add to lecture
 [ENTER SLIDES ON HOW EACH CATERGORIES OPERATES/Nesecary Background info on each category]
 
-TODO: add to lecture
 Content analysis techniques:
     data unit viewing - knowing where the evidence could be, but not what it is.
     logical file system-level searching: Looks for a specific value or phrase in a data unit - we know what the content is but not where
     data unit allocation status - extracting and analysing unallocated data in a file system
     Consistencey checks (for content): check all alloacated data units have 1 metadata entry, none = orphaned data 2=unusual not allowed in file systems.
 
-TODO: add to lecture
 Metadata analysis Techniques:
     Metadata Lookup - reading metadata structure inforamation (istat)
     Logical File Viewing - looking up the data units allocated from metadata and using content lookup to find contents of the file.
@@ -146,12 +142,10 @@ Metadata analysis Techniques:
     Unallocated metadata analysis - listing unallocated metadata entries (ils)
     Metadata attribute searching and sorting - (ifind)
 
-TODO: add to lecture
 File Name Analysis Techniques:
     File Name Listing: list file and directories looking for data of interest, then investigating futher with metadata techniques like logical file viewing.
     File Name Searching: when dont know partial name info like file extention.
 
-TODO: add to lecture
 \subsection{File System Types} %ntfs, fat etc.
 
 
