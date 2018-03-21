@@ -4,8 +4,9 @@
 \contentsline {section}{\numberline {4}Kali Linux Information}{3}{section.4}
 \contentsline {section}{\numberline {5}Lab Scenario}{3}{section.5}
 \contentsline {section}{\numberline {6}Task 0: Create a Case Directory for Investigation}{4}{section.6}
-\contentsline {section}{\numberline {7}Task 1: Create a Forensic Image}{4}{section.7}
-\contentsline {section}{\numberline {8}Task 2: Automated Data Carving}{7}{section.8}
-\contentsline {section}{\numberline {9}Task 3: File System Information Gathering using TSK}{7}{section.9}
-\contentsline {section}{\numberline {10}Task 4: Searching Unallocated Space for Evidence}{8}{section.10}
-\contentsline {section}{\numberline {11}Task 5: Deleted File Recovery using Meta Data Pointers}{11}{section.11}
+\contentsline {section}{\numberline {7}New Task 1: Download The Forensic Image}{4}{section.7}
+\contentsline {section}{\numberline {8}Task 2: Automated Data Carving}{4}{section.8}
+\contentsline {section}{\numberline {9}Task 3: File System Information Gathering using TSK}{5}{section.9}
+\contentsline {section}{\numberline {10}Task 4: Searching Unallocated Space for Evidence}{6}{section.10}
+\contentsline {section}{\numberline {11}Task 5: Deleted File Recovery using Meta Data Pointers}{9}{section.11}
+\contentsline {section}{\numberline {12}Old Task 1: Create a Forensic Image}{12}{section.12}

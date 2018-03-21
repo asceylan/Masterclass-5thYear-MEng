@@ -1,0 +1,75 @@
+Task2:
+FLAG: audit.txt sha1 hash: bca0776d674e83c6240e9394dbebed67abea984b
+
+Task3:
+3.1) sector 128 (mmls)
+3.2) Cluster size: 4096 bytes (fsstat)
+3.3) FLAG: Sector Size: 512 bytes (fsstat)
+3.4) Clusters persector: 4096/512 = 8 (fsstat)
+3.5) Using fsstat
+
+Task 4
+4.1) # blkls -o 128 images/cfreds_2015_data_leakage_rm#2.dd > output/unallocated.blkls
+
+4.2) # strings -t d output/unallocated.blkls > output/unallocated.str
+
+4.3) # grep -e "NASA" output/unallocated.str 
+        Byte Location: 42565504
+
+4.4) Sector Location: 42565504/512 = 83135.75
+     # blkcalc -u 83135 -o 128 images/cfreds_2015_data_leakage_rm#2.dd 
+        Cluster Location: 91335
+
+4.5) # ifind -a -o 128 -d 91335 images/cfreds_2015_data_leakage_rm#2.dd
+     FLAG: Meta data inode address: 967056
+
+4.6) # istat -o 128 images/cfreds_2015_data_leakage_rm#2.dd 967056 > output/nasa.istat
+
+4.7) # ffind -a -o 128 images/cfreds_2015_data_leakage_rm#2.dd 967056
+        * /$OrphanFiles/PRICIN~1/super_bowl.avi
+
+4.8) # icat -o 128 images/cfreds_2015_data_leakage_rm#2.dd 967056 > output/nasa.icat
+     file output/nasa.icat
+        output/nasa.icat: Composite Document File V2 Document, Little Endian, 
+        Os: Windows, Version 6.1, Code page: 1252, 
+        Title: [secret_project]_market_shares, Author: company, 
+        Last Saved By: company, Name of Creating Application: Microsoft Excel, 
+        Create Time/Date: Fri Feb 20 06:53:23 2004, 
+        Last Saved Time/Date: Tue Dec  2 17:28:56 2014, 
+        Security: 0
+     libreoffice output/nasa.icat
+
+Task 5) 
+5.1) # fls -rd -o 128 images/cfreds_2015_data_leakage_rm#2.dd
+     Inode Address for my_friends.svg: 1651335
+
+5.2) # istat -o 128 images/cfreds_2015_data_leakage_rm#2.dd 1651335
+     file size: 58368 bytes
+     Starting Sector: 111408
+     Ending Sector: 111522
+
+5.3) # blkstat -o 128 images/cfreds_2015_data_leakage_rm#2.dd 111408
+        Sector: 111408
+        Not Allocated
+        Cluster: 12904
+     # blkstat -o 128 images/cfreds_2015_data_leakage_rm#2.dd 111522
+        Sector: 111522
+        Not Allocated
+        Cluster: 12918
+     FLAG: Cluster difference: 12918 - 12904 = 14 clusters
+
+5.4) # blkls -o 128 images/cfreds_2015_data_leakage_rm#2.dd 111408-111521 > output/recovered-file.blkls
+     # sha1sum output/recovered-file.blkls 
+        95175c35be9d74ad3e271550e358e634154ba105  output/recovered-file.blkls
+        
+     # file output/recovered-file.blkls 
+        output/recovered-file.blkls: Composite Document File V2 Document, 
+        Little Endian, Os: Windows, Version 6.1, Code page: 1252, 
+        Title: [secret_project]_progress_#3, Author: company, 
+        Template: Normal.dotm, Last Saved By: company, Revision Number: 1, 
+        Name of Creating Application: Microsoft Office Word, 
+        Total Editing Time: 01:00, Create Time/Date: Tue Jan 20 15:12:00 2015, 
+        Last Saved Time/Date: Tue Jan 20 15:13:00 2015, Number of Pages: 8, 
+        Number of Words: 2802, Number of Characters: 15974, Security: 0
+
+

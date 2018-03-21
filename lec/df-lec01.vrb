@@ -6,8 +6,3 @@
 		\item Evidence Searching
 		\item Event Reconstruction
 	\end{itemize}
-	\begin{figure}
-		\includegraphics[scale=1]{df-guidelines}
-		\caption{Diagram of Digital Forensics Investigation Phases}
-		\label{fig:df-guidelines}
-	\end{figure}

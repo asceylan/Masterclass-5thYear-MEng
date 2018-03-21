@@ -37,23 +37,61 @@
 \end{frame}
 
 \begin{frame}
-\section*{Overview}
-\frametitle{Outline}
+\frametitle{What is this Masterclass?}
+This masterclass aims to give an overview of digital forensics and provide practical experience through a lecture and lab combination.\\
+\vspace{\baselineskip}
+The materials will be structured as follows:
+\begin{enumerate}
+	\item Lecture is here (ROOM) [TIME]
+	\item Break [TIME]
+	\item Lab (EM2.50) [TIME]
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Lab Overview}
+\textbf{The Scenario:}\\
+You are digital forensics investigators working on a data information leakage case for a client.\\
+\vspace{\baselineskip}
+
+Your hypothetical team has given you a USB stick recovered from the person suspected of leaking information. You will analyse the file system and try to prove if they have leaked information.\\
+
+
+\begin{itemize}
+	\item Set up a Lab Environment using Kali Linux
+	\item Create/Gather a Forensic image of the USB in question.
+	\item Perform automated data carving
+	\item Gather file system information.
+	\item Keyword searching of unallocated space {\&} extraction of related (deleted) files.
+	\item Recover and confirm evidence using metadata pointers.
+\end{itemize}
+
+\textbf{Reserouce Credits:}\\
+The USB resources we will be using in today's lab are from the \textit{National Institute of Standards and Technology (NIST)} as part of their \textit{Computer Forensic Reference Data Sets (CFReDS)}\footnote{\url{https://www.cfreds.nist.gov/}}.\\
+\vspace{\baselineskip}
+
+The rest of the resources and a can be found here:\\
+\url{https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html}
+\end{frame}
+
+\begin{frame}
+\section*{Lecture Overview}
+\frametitle{Lecture Overview}
 \tableofcontents
 \end{frame}
 
 \begin{frame}
-	\frametitle{What is Digital Forensics}
+	\frametitle{What is Digital Forensics?}
 	\section{What is Digital Forensics?}
 %	\begin{itemize}
 %		\item Digital forensics is a pulls from both cyber security and forensic science fields.
 %	\end{itemize}
 	\begin{block}{Digital Forensics:}
-		``Computer [Digital] Forensics is the practice of determining the past actions that have taken place on a computer system using forensic techniques and understanding artefacts.'' - David Cowen
+		``Computer [Digital] Forensics is the practice of \textit{determining the past actions that have taken place on a computer system} using forensic techniques and understanding artefacts.'' - David Cowen
 	\end{block}
 		
 	\begin{block}{Artefact:}
-		``An Artefact is a reproducible file, setting or system change that occurs every time an application or operating system performs a specific action'' - David Cowen
+		``An Artefact is a \textit{reproducible} file, setting or system change that occurs every time an application or operating system performs a specific action'' - David Cowen
 	\end{block}
 
 	The artefacts we will be dealing with in the lab are files and file systems.
@@ -73,13 +111,15 @@
 			\end{itemize}
 			\item File system analysis allows:
 			\begin{itemize}
-				\item Introduction to a new field using a common ground
-				\item Insight into how OS files relate to memory and what creation and deletion features actual do
+				\item Introduction to a new field (digital forensics).
+				\item A different perspective on computer science knowledge we already have.
+				\item Insight into how files relate to memory, and what creation and deletion features actual do.
 			\end{itemize}
 	\end{itemize}
 	\begin{figure}
 		\includegraphics[scale=0.3]{digital-data-analysis-layers-BrianCarrier}
-		\caption{Layers of Analysis}
+		\caption{Layers of Analysis\footnote{Carrier, Brian. File System Forensic Analysis (Kindle Location 619). Pearson Education. Kindle Edition.}} 
+
 	\end{figure}
 \end{frame}
 
@@ -92,46 +132,55 @@
 
 \begin{frame}
 	\frametitle{Forensic Process}
-	Digital forensics results can be used in a court of law therefore accuracy, integrity and an unbiased approach towards evidence is required.\\
-	As a result similar approaches to evidence handling and procedure from traditional forms of forensics are utilised.   
+	\textit{Digital forensics results can be used in a court of law} therefore \textbf{accuracy}, \textbf{integrity} and an \textbf{unbiased approach} towards evidence is required.\\
+	Traditional approaches towards evidence handling and procedure are shared between traditional and digital forensics.   
 	\begin{block}{Scientific Method}
 		Defining a hypothesis based on evidence then proceeding search for evidence which disproves our hypothesis.
 	\end{block}
 	\begin{block}{Digital Forensic Investigation}
-	``A digital forensic investigation is a process that uses science
-     and technology to analyse digital objects and that develops and
-     tests theories, which can be entered into a court of law, to
-     answer questions about events that occurred. In other words, a
-     digital forensic investigation is a more restricted form of
-     digital investigation.'' - Brian Carrier
+	``A digital forensic investigation is a process that \textit{uses science
+     and technology} to \textit{analyse digital objects} and that \textbf{develops and
+     tests theories,} which can be entered into a court of law, to
+     \textit{answer questions about events that occurred}.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 480-481). Pearson Education. Kindle Edition.}} 
 	\end{block}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}
 	\frametitle{Digital Crime Scene Investigation Process Overview}
 	\subsection*{Digital Crime Scene Investigation Process Overview}
 	There are three major areas in digital crime scene investigations:
 	\begin{itemize}
 		\item System Preservation
+			\begin{itemize}
+				\item Write Blockers,
+				\item Cryptographic Hashes,
+				\item Proper Evidence Handling,
+				\item Photographic Evidence of a crime scene/workstation.
+			\end{itemize}
 		\item Evidence Searching
+			\begin{itemize}
+				\item Data Carving,
+				\item Metadata information gathering.
+				\item Deleted file recovery. 
+			\end{itemize}
 		\item Event Reconstruction
+			\begin{itemize}
+				\item Time line creation
+				\item Gathering/providing reliably re-creatable evidence. 
+			\end{itemize}
 	\end{itemize}
-	\begin{figure}
-		\includegraphics[scale=1]{df-guidelines}
-		\caption{Diagram of Digital Forensics Investigation Phases}
-		\label{fig:df-guidelines}
-	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{PICL Guidelines}
 	\subsection*{PICL Guidelines}
-	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good staring structure:
+	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good staring structure:\\
+	\vspace{\baselineskip}
 	\begin{itemize}
-		\item Preservation:	 Preservation of the system being investigated.
-		\item Isolation:	 Keeping analysis environment is separate from both the suspect data and the outside world.
-		\item Correlation:	 Correlate data with other independent sources. Reduces risk of forged data.
-		\item Logging:	 Log/document your actions. This helps identify what searches you have not yet conducted and what your results were.
+		\item \textbf{Preservation}:\\	 Preservation of the system being investigated.
+		\item \textbf{Isolation}:\\	 Keeping analysis environment is separate from both the suspect data and the outside world.
+		\item \textbf{Correlation}:\\	 Correlate data with other independent sources. Reduces risk of forged data.
+		\item \textbf{Logging}:\\	 Log/document your actions. This helps identify what searches you have not yet conducted and what your results were.
 	\end{itemize}
 \end{frame}
 
@@ -139,11 +188,11 @@
 	\frametitle{Analysis Types}
 	\subsection*{Analysis Types}
 	\begin{block}{Live Analysis:}
-		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier
+		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 495-496). Pearson Education. Kindle Edition.}}
 	\end{block}
 
 	\begin{block}{Dead Analysis:}
-		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier
+		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 496-497). Pearson Education. Kindle Edition. }}
 	\end{block}
 \end{frame}
 
@@ -157,11 +206,29 @@
 \begin{frame}
 	\frametitle{Evidence Acquisition/Imaging}
 	\begin{itemize}
-		\item In order to perform analysis on digital artefacts a forensic duplicate of the media must be created.
-		\item Forensic Duplicates are \emph{bit-for-bit} copies of the original disk and can encompass the full disk or a single partition. 
-		\item This process is known as imaging or acquisition.
-		\item Contents of a disk are always changing therefore \emph{Write Blockers} are used to preserve the disk state.
-		\item Hash functions such as SHA-256, SHA-1, MD5 are used to verify the image against the original artefact.
+		\item In order to perform analysis on digital artefacts a forensic \textbf{duplicate} of the media must be created.
+		\item \textit{Forensic Duplicates} are \textbf{bit-for-bit copies of the original disk} and can encompass the full disk or a single partition. 
+		\item This process is known as \textbf{imaging} or \textbf{acquisition}.
+		\item Contents of a disk are always changing therefore \textbf{Write Blockers} are used to preserve the disk state.
+		\item \textbf{Cryptographic hash functions} such as \texttt{SHA-256, SHA-1, MD5} are used to \textbf{verify} the image against the original artefact.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Image Types}
+	\subsection*{Image Types}
+	\begin{itemize}
+		\item Raw Format (\texttt{.dd} \texttt{.raw} \texttt{.img})
+		\begin{itemize}
+			\item Only contain data from the original artifact
+			\item Metadata on image is not included however can be generated into a separate file by tools. (guymager, TSK)
+			\item Tools: \texttt{dd}, \texttt{dcfldd}, \texttt{dd\_rescue}, \texttt{rdd}, \texttt{df3dd}, \texttt{guymager}
+		\end{itemize}
+		\item EnCase Evidence Format (Expert Witness \texttt{.E01})
+		\begin{itemize}
+			\item Expert Witness images use headers and footers to hold metadata about the image.
+			\item Metatdata can include: drive type, source disk OS, timestamps, hashes, CRCs over blocks.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -190,35 +257,17 @@
 	\subsection*{Imaging Challenges}
 	While an SSD can be imaged with the same tools as a traditional hard disk drive (HDD), there are technology specific issues that cause problems for forensic investigators.
 	\begin{itemize}
-		\item \emph{Program-Erase cycles}
+		\item \textbf{Program-Erase cycles}
 			\begin{itemize}
 				\item Sequence of events that result in data being written to a solid state flash memory cell, then erased and rewritten (e.g flash memory USB sticks). 
-				\item These P/E cycles result in a small amount of physical damage to the medium, which can result in bad sectors.
+				\item These P/E cycles result in a \textit{small amount of physical damage to the medium}, which can result in \textbf{bad sectors}.
 			\end{itemize}
-		\item \emph{Wear Levelling}
+		\item \textbf{Wear Levelling}
 			\begin{itemize}
-				\item prolongs the life of solid state/flash memory
+				\item Prolongs the life of solid state/flash memory.
 				\item Distributes rewrites evenly across the medium, so no single block dies prematurely.
 			\end{itemize}
 		\item These two technologies due to the evolution of memory results in unallocated space being overwritten earlier than it would on a HDD. This could overwrite valuable hidden information by accident
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Image Types}
-	\subsection*{Image Types}
-	\begin{itemize}
-		\item Raw Format (\texttt{.dd} \texttt{.raw} \texttt{.img})
-		\begin{itemize}
-			\item only contain data from the original artifact
-			\item meta data is no included however can be generated into a separate file by tools.
-			\item Tools: \texttt{dd}, \texttt{dcfldd}, \texttt{dd\_rescue}, \texttt{rdd}, \texttt{df3dd}, \texttt{guymager}
-		\end{itemize}
-		\item EnCase Evidence Format (Expert Witness \texttt{.E01})
-		\begin{itemize}
-			\item Expert Witness images use headers and footers to hold metadata about the image.
-			\item metatdata can include: drive type, source disk OS, timestamps, hashes, CRCs over blocks.
-		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -232,20 +281,21 @@
 \begin{frame}[allowframebreaks]
 	\frametitle{What are File Systems?}
 	\begin{block}{File System:}
-		File systems manage how data is stored and retrieved in a computer system. They consist of structural and user data which can be organised and understood by users and computers.
+		File systems manage how data is \textbf{stored} and \textbf{retrieved} in a computer system. They consist of \textbf{structural} and \textbf{user data} which can be organised and understood by users and computers.
 	\end{block}
 	
 	\begin{itemize}
-		\item File system architectures (FAT32, Ext3 etc.) provide different methods of tracking data on physical media, each has their own data structures, look up tables and allocation methods. \\
+		\item File system architectures (FAT32, Ext3 etc.) provide \textit{different methods of tracking data on physical media}, each has their own data structures and look up tables. % and allocation methods.
+		\\
 		
-		\item Modern operating systems contain support for many different file systems providing an interface with physical storage. 
+		\item Modern operating systems \textit{contain support for many different file systems} providing an interface with physical storage, defining things like allocation methods. 
 	\end{itemize}
 	
 	\newpage
 	File systems are made up of 2/3 layers:
 	\begin{enumerate}
 		\item\textbf{Logical Layer}: Provides a user application level API for commands such as read, write and chmod etc.
-		\item\textbf{Virtual Layer}\textit{optional}: Allows access to multiple physical file systems e.g. block based: FAT32, NTFS or network based: NFS
+		\item\textbf{Virtual Layer} (\textit{optional}): Allows access to multiple physical file systems e.g. block based: FAT32, NTFS or network based: NFS
 		\item\textbf{Physical Layer}: Interacts with hardware, performing block and memory management and interacting with device drivers etc.
 	\end{enumerate}
 	
