@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  21 MAR 2018 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.24)  24 MAR 2018 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -800,220 +800,209 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 124.
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
-
- []
-
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 130.
 
 Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 137.
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 143.
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--190
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
+Underfull \hbox (badness 10000) in paragraph at lines 214--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
+Underfull \hbox (badness 10000) in paragraph at lines 214--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--220
 
  []
 
 [7]
-Overfull \hbox (37.1535pt too wide) in paragraph at lines 215--218
+Overfull \hbox (37.1535pt too wide) in paragraph at lines 221--224
 \OT1/pcr/m/n/10.95 # blkcalc -u [SECTOR[]LOCATION] -o [file-system-starting-loc
 ation] [path-to- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--218
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--236
+Underfull \hbox (badness 10000) in paragraph at lines 233--242
 
  []
 
 
-Overfull \hbox (0.36156pt too wide) in paragraph at lines 227--236
+Overfull \hbox (0.36156pt too wide) in paragraph at lines 233--242
 \OT1/pcr/m/n/10.95 # ifind -a -o [file-system-starting-location] -d [data-unit-
 location]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--236
+Underfull \hbox (badness 10000) in paragraph at lines 233--242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
+Underfull \hbox (badness 10000) in paragraph at lines 246--249
 
  []
 
 
-Overfull \hbox (56.78151pt too wide) in paragraph at lines 244--264
+Overfull \hbox (56.78151pt too wide) in paragraph at lines 250--270
 []\OT1/pcr/m/n/10.95 # istat -o [file-system-starting-location] [path-to-image]
  [inode-location]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--264
+Underfull \hbox (badness 10000) in paragraph at lines 250--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--264
+Underfull \hbox (badness 10000) in paragraph at lines 250--270
 
  []
 
 
-Overfull \hbox (26.64153pt too wide) in paragraph at lines 244--264
+Overfull \hbox (26.64153pt too wide) in paragraph at lines 250--270
 \OT1/pcr/m/n/10.95 #icat -o [file-system-starting-location] [path-to-image] [in
 ode-location]
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 290--295
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--295
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-
-Overfull \hbox (46.3515pt too wide) in paragraph at lines 303--307
+[10]
+Overfull \hbox (46.3515pt too wide) in paragraph at lines 309--313
 [][]\OT1/pcr/m/n/10.95 # istat -o [file-system-starting-location]  [path-to-ima
 ge]  [inode-address] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--307
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 309--313
 
  []
 
 
-Overfull \hbox (33.21152pt too wide) in paragraph at lines 316--322
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+
+Overfull \hbox (33.21152pt too wide) in paragraph at lines 322--328
 \OT1/pcr/m/n/10.95 # blkstat -o [file-system-starting-location] [path-to-image]
  [start-sector 
  []
 
 
-Overfull \hbox (20.07153pt too wide) in paragraph at lines 316--322
+Overfull \hbox (20.07153pt too wide) in paragraph at lines 322--328
 \OT1/pcr/m/n/10.95 # blkstat -o [file-system-starting-location] [path-to-image]
  [end-sector 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--322
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
-
- []
-
-
-Overfull \hbox (13.50154pt too wide) in paragraph at lines 335--338
-\OT1/pcr/m/n/10.95 # blkls -o [file-system-starting-location] [path-to-image] [
-start-stop]
  []
 
 
@@ -1022,37 +1011,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--338
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--346
+Overfull \hbox (13.50154pt too wide) in paragraph at lines 341--344
+\OT1/pcr/m/n/10.95 # blkls -o [file-system-starting-location] [path-to-image] [
+start-(stop
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--353
+Underfull \hbox (badness 10000) in paragraph at lines 349--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 357--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
@@ -1062,63 +1057,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--375
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
-[12] <../../figures/guymager-window.png, id=175, 995.72pt x 527.9725pt>
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+<../../figures/guymager-window.png, id=175, 995.72pt x 527.9725pt>
 File: ../../figures/guymager-window.png Graphic file (type png)
 
 <use ../../figures/guymager-window.png>
 Package pdftex.def Info: ../../figures/guymager-window.png used on input line 3
-81.
+87.
 (pdftex.def)             Requested size: 497.85878pt x 263.9856pt.
 
-Overfull \hbox (44.89088pt too wide) in paragraph at lines 381--382
+Overfull \hbox (44.89088pt too wide) in paragraph at lines 387--388
  [][] 
  []
 
-
-<../../figures/guymager-aquisition-window.png, id=178, 665.48625pt x 576.1525pt
+[13 <../../figures/guymager-window.png>]
+<../../figures/guymager-aquisition-window.png, id=185, 665.48625pt x 576.1525pt
 >
 File: ../../figures/guymager-aquisition-window.png Graphic file (type png)
  <use ../../figures/guymager-aquisition-window.png>
 Package pdftex.def Info: ../../figures/guymager-aquisition-window.png used on i
-nput line 398.
+nput line 404.
 (pdftex.def)             Requested size: 332.74231pt x 288.07553pt.
- [13 <../../figures/guymager-window.png>] [14 <../../figures/guymager-aquisitio
-n-window.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 411--416
+ [14 <../../figures/guymager-aquisition-window.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 417--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--416
+Underfull \hbox (badness 10000) in paragraph at lines 417--422
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
 [15]
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 424.
- (./df-labsheet.xwm) (./df-labsheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 424.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 430.
+ (./df-labsheet.xwm)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+(./df-labsheet.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 430.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
 Package rerunfilecheck Info: File `df-labsheet.out' has not changed.
 (rerunfilecheck)             Checksum: 485E9E08B3FB6E7E350D3FEBDBBD208E;827.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 424.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
  ) 
 Here is how much of TeX's memory you used:
- 15531 strings out of 492995
- 250144 string characters out of 6132704
- 407686 words of memory out of 5000000
+ 15530 strings out of 492995
+ 250133 string characters out of 6132704
+ 406686 words of memory out of 5000000
  18794 multiletter control sequences out of 15000+600000
  13262 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,8n,58p,937b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,8n,58p,937b,930s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
@@ -1135,10 +1143,10 @@ f-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/courier/ucrro8a.pfb>
-Output written on df-labsheet.pdf (16 pages, 288086 bytes).
+Output written on df-labsheet.pdf (16 pages, 287940 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

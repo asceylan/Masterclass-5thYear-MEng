@@ -4,12 +4,13 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{comment}
 
 \title{Digital Forensics}
 \subtitle{File System Forensics Masterclass}
 \author{Fraser Brown}
 \institute{Heriot-Watt University}
-\date{\today}
+\date{March 28, 2018}
 
 \graphicspath{{../figures/}}
 
@@ -42,10 +43,13 @@ This masterclass aims to give an overview of digital forensics and provide pract
 \vspace{\baselineskip}
 The materials will be structured as follows:
 \begin{enumerate}
-	\item Lecture is here (ROOM) [TIME]
-	\item Break [TIME]
-	\item Lab (EM2.50) [TIME]
+	\item Lecture (EM1.01) 10:15-11:15
+	\item Lab (EM2.50) 11:15 - 13:15
 \end{enumerate}
+\vspace{\baselineskip}
+\textbf{Lecture and Lab Resources:} \\
+
+\url{http://www2.macs.hw.ac.uk/~fmb30/digital-forensics/}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
@@ -166,7 +170,7 @@ The rest of the resources and a can be found here:\\
 		\item Event Reconstruction
 			\begin{itemize}
 				\item Time line creation
-				\item Gathering/providing reliably re-creatable evidence. 
+				\item Gathering/providing reliably recreatable evidence. 
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -174,7 +178,7 @@ The rest of the resources and a can be found here:\\
 \begin{frame}
 	\frametitle{PICL Guidelines}
 	\subsection*{PICL Guidelines}
-	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good staring structure:\\
+	While each forensic investigator/team may have their own procedures and work flow the PICL guidelines below provide a good starting structure:\\
 	\vspace{\baselineskip}
 	\begin{itemize}
 		\item \textbf{Preservation}:\\	 Preservation of the system being investigated.
@@ -298,9 +302,11 @@ The rest of the resources and a can be found here:\\
 		\item\textbf{Virtual Layer} (\textit{optional}): Allows access to multiple physical file systems e.g. block based: FAT32, NTFS or network based: NFS
 		\item\textbf{Physical Layer}: Interacts with hardware, performing block and memory management and interacting with device drivers etc.
 	\end{enumerate}
-	
+\end{frame}
+
+\begin{frame}
 	\begin{figure}[h]
-		\includegraphics[scale=0.5]{abstract-fs-diagram}
+		\includegraphics[scale=0.4]{abstract-fs-diagram}
 		\caption{Abstract Diagram of a File System on a Computer}
 		\label{fig:abstract-fs-diagram}	
 	\end{figure}
@@ -386,7 +392,7 @@ The rest of the resources and a can be found here:\\
 		\item Increased cluster size over FAT8/FAT16 architectures, due to being stored as 32bit values.
 		\item FAT32 has two overarching data structures:
 			\begin{itemize}
-				\item \textbf{File Allocaiton Table}: \\
+				\item \textbf{File Allocation Table}: \\
 				Stores next cluster for a given file, holds allocation status of clusters.
 				\item \textbf{Directory Entries}:\\
 				One per file/directory which contains: file name , size, starting address of content and other metadata.
@@ -394,7 +400,7 @@ The rest of the resources and a can be found here:\\
 		\item The \textit{first cluster address} starts at 2. 
 		\item \textbf{\textit{Calculate Sector Address}} of Cluster C:\\ 
 			$(C-2)\times (NumberSectorsPerCluster) + (SectorOfCluster2)$
-		\item \textit{Calculate cluster address} from sector address S:\\
+		\item \textbf{Calculate Cluster address} from sector address S:\\
 			$((S – SectorOfCluster2) / (NumberSectorsPerClusterr)) + 2$
 	\end{itemize}
 	\newpage
@@ -583,6 +589,9 @@ Given the above gathered infomation we can now recover a file, this method uses 
 	\end{figure}
 \end{frame}
 
+
+\begin{comment}
+
 \begin{frame}
 \frametitle{Content Analysis}
 \subsection*{Content Analysis}
@@ -684,6 +693,8 @@ Given the above gathered infomation we can now recover a file, this method uses 
 	% give exmaple commands
 \end{frame}
 
+\end{comment}
+
 \begin{frame}
 	\section{Additional Resources}
 	\frametitle{Additional Resources}
@@ -707,8 +718,10 @@ Given the above gathered infomation we can now recover a file, this method uses 
 	\frametitle{Careers}
 	\section{Careers}
 	\begin{itemize}
-		\item \textbf{GHCQ} - Internet and Systems Investigation: Forensic Technologist\footnote{https://recruitmentservices.applicationtrack.com/vx/lang-en-GB/mobile-0/appcentre-3/brand-2/xf-bd8ab30ccf84/candidate/so/pm/1/pl/6/opp/1268}
-		\item \textbf{Cyfor} - eDiscovery Digital Forensics and Cyber Security - \url{https://cyfor.co.uk/careers/}
+		\item \textbf{GHCQ} - Internet and Systems Investigation: Forensic Technologist\footnote{\tiny\url{https://recruitmentservices.applicationtrack.com/vx/lang-en-GB/mobile-0/appcentre-3/brand-2/xf-bd8ab30ccf84/candidate/so/pm/1/pl/6/opp/1268}}
+		\item \textbf{Cyfor} - eDiscovery Digital Forensics and Cyber Security\footnote{\tiny\url{https://cyfor.co.uk/careers/}}
+		\item \textbf{PwC} - Graduate, Technology, eDiscovery {\&} Forensic Computing, Birmingham 2018\footnote{\tiny\url{http://www.careersstudent.pwc.co.uk/ShowJob/Id/882361/Graduate,-Technology,-eDiscovery-Forensic-Computing,-Birmingham-2018/}}
+		\item \textbf{Secureworks} - Cyber security and incident response \footnote{\tiny\url{https://www.secureworks.co.uk/careers}}
 	\end{itemize}
 \end{frame}
 

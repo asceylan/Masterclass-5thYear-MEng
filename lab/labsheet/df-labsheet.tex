@@ -54,7 +54,7 @@
 \newpage
 
 \section{Lab Overview}
-The learning objective for this lab is for participants to gain practical experience in digital forensics specifically file system analysis. During the lab you will gain experience in the following tools, environments and tasks:
+The learning objective for this lab is for participants to gain practical experience in digital forensics, specifically file system analysis. During the lab you will gain experience in the following tools, environments and tasks:
 \begin{itemize*}
 	\item Kali Linux\footnote{https://www.kali.org/}
 	\item The Sleuth Kit (TSK)\footnote{https://www.sleuthkit.org/} file system analysis tool kit.
@@ -95,22 +95,28 @@ Your user accounts should have been given access to virtual box in the universit
 In Kali Linux you are logged in as the root user of the system, therefore the operating system assumes you know what you are doing. Double check the commands you are entering especially if they are related to \texttt{rm}.
 
 \section{Lab Scenario}
-A client has contacted your digital forensics firm stating there has been an attempt to leak information from the company. The person accused of said information leakage has had various office technology collected, said items have been split among your hypothetical team. You have been assigned removable media {\#} 2 - a 4GB USB stick. The following tasks will aid in evidence and hypothesis determination for the client.
+A client has contacted your digital forensics firm stating there has been an attempt to leak information from the company. The person accused of said information leakage has had various office technologies collected, said items have been split among your hypothetical team. You have been assigned removable media {\#} 2 - a 4GB USB stick. The following tasks will aid in evidence and hypothesis determination for the client.
 
 \section{Task 0: Create a Case Directory for Investigation}
-Within your home directory create the a \texttt{cases} directory which contains a directory called \texttt{001} to represent the case number you are working on. Make \texttt{cases/001/} this your current working directory in a terminal window. Finally within \texttt{cases/001/} create two more directories called \texttt{images} and \texttt{output}.
+Within your home directory create the a \texttt{cases} directory which contains a directory called \texttt{001} to represent the case number you are working on. Make \texttt{cases/001/} your current working directory in a terminal window. Finally within \texttt{cases/001/} create two more directories called \texttt{images} and \texttt{output}.
 
 \section{New Task 1: Download The Forensic Image}\label{sec:task1-forensic-image}
 
 \textbf{IMPORTANT:} The original Task 1 (creating forensic image) is not feasible on the university machines due to the time it takes. Making a forensic image of the USB sticks takes far to long. On my own laptop VM it was completed in 5 minutes however the lab machines took 20+ min to get 20{\%} through. Therefore, instead please run the following commands from a terminal within \texttt{cases/001/images/} directory:\\
 
 \noindent
+Download \texttt{cfreds\_2015\_data\_leakage\_rm{\#}2.7z} zip file:
 \begin{lstlisting}[breaklines]
-# wget http://www2.macs.hw.ac.uk/~fmb30/digital-forensics-masterclass/cfreds_2015_data_leakage_rm%232.7z
+# wget http://www2.macs.hw.ac.uk/~fmb30/digital-forensics/cfreds_2015_data_leakage_rm%232.7z
+
 \end{lstlisting}
+
 \noindent
+Unpack the zip file into \texttt{cases/001/images/}:\\
 \verb|# 7z x cfreds_2015_data_leakage_rm#2.7z| \\
+
 \noindent
+Remove zip file from the system as its not needed any more:\\
 \verb|# rm cfcfreds_2015_data_leakage_rm#2.7z|\\
 
 You should now see the file \verb|cfcfreds_2015_data_leakage_rm#2.dd| in the folder \texttt{cases/001/images/}. This is a forensic image of the USB drive in question. If you wish to do the \textbf{original} Task 1 and manually create a forensic image in your spare time, please feel free with your own USB sticks. \textit{The old version of Task 1 can be found at the end of the document.} I apologise for creating forensic images not being doable within the lab time.
@@ -315,7 +321,7 @@ Using this inode (meta data) pointer address, we can gather stats on the data un
 }
 {\noindent
 \textbf{Task 5.3: Retrieve Data Units (Cluster) From Sector Addresses:}\\
-This will not only allow provide us more information about the files location within the memory and file system but it will allow us to verify that the memory locations have not been overwritten.\\
+This will not only provide us more information about the files location within the memory and file system but it will allow us to verify that the memory locations have not been overwritten.\\
 \texttt{{\#} blkstat -o [file-system-starting-location]  [path-to-image]  [start-sector\\-address]}\\
 \noindent
 \texttt{{\#} blkstat -o [file-system-starting-location]  [path-to-image]  [end-sector\\-address]}\\
@@ -365,7 +371,7 @@ Verify it is a \texttt{.svg} file with the file command:\\
 
 \section{Old Task 1: Create a Forensic Image}\label{sec:task1-forensic-image}
 
-\textit{This is the old task 1 that walks you through createing a forensic image from a USB stick. Due to time constraints and execution time on university machines it is advised that you skip this task during the lab, but feel free to try it out in your own time.}\\
+\textit{This is the old task 1 that walks you through creating a forensic image from a USB stick. Due to time constraints and execution time on university machines it is advised that you skip this task during the lab, but feel free to try it out in your own time.}\\
 
 
 
@@ -383,7 +389,7 @@ Open a terminal window (we will use this later anyway) and enter: \texttt{{guyma
 	\label{fig:guymager-main-window}
 \end{figure}
 \\
-If the 4GB USB drive does not show up press \texttt{f5} to rescan devices.  Select the drive you wish to create an image of in our case right click the 4GB drive and select the \texttt{acquire image} option. Fill out the displayed form making sure you have the following options selected as per the list below and/or \autoref{fig:guymager-aquisition-window} then click start:
+If the 4GB USB drive does not show up press \texttt{f5} to rescan devices.  Select the drive you wish to create an image of (4GB drive) right click it, and select the \texttt{acquire image} option. Fill out the displayed form making sure you have the following options selected as per the list below and/or \autoref{fig:guymager-aquisition-window} then click start:
 \begin{itemize*}
 \item Linux dd raw image
 \item Uncheck split image
@@ -417,8 +423,8 @@ The output should match the hash listed in the .info file you just created.\\
 \noindent
 Remove the USB from your machine and return it to the evidence box.
 
-\subsection*{Get Your Flag:}
-\noindent
-\textit{\textbf{Optional:} Enter the hash into the \texttt{findflag} program to receive your first flag.}
+%\subsection*{Get Your Flag:}
+%\noindent
+%\textit{\textbf{Optional:} Enter the hash into the \texttt{findflag} program to receive your first flag.}
 
 \end{document}
