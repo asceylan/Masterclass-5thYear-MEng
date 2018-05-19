@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#take in first command argument as evidence
+if [ ${#} == 1 ]; then
+    ev="$1"
+else
+    echo "To many evidence arguemnts given please try again"
+fi
+
+task2ans='bca0776d674e83c6240e9394dbebed67abea984b'
+task3ans='8'
+task4ans='967056'
+task5ans='14'
+
+# todo: generate flags for Task1 (all usbs) Task 1
+# Due to rewriting of task 1 this in no longer needed.
+
+# todo: generate flag recognition for Task 2
+# audit.txt sha1 hash: bca0776d674e83c6240e9394dbebed67abea984b
+if [ $1 == $task2ans ]; then 
+    flag=$(echo -e "${task2ans}FLAG2" | shasum -a 1)
+    echo -e "Congratulations you successfully carved all the data from the digital image!\n"
+    echo -e "Here is your flag: $flag"
+
+# sectors in a cluster = 8
+elif [ $1 == $task3ans ]; then 
+    flag=$(echo "${task3ans}FLAG3" | shasum -a 1)
+    echo -e "Congratulations you successfully carved all the data from the digital image!\n"
+    echo -e "Here is your flag: $flag"
+
+# data unit clister address 967056
+elif [ $1 == $task4ans ]; then 
+    flag=$(echo -e "${task4ans}FLAG4" | shasum -a 1)
+    echo -e "Congratulations you successfully recovered the NASA data from a deleted string in the file remains!! That is so cool!!!\n"
+    echo -e "Here is your flag: $flag"
+
+# difference between start and stop clusters: 
+# 12918 - 12904 = 14 clusters
+elif [ $1 == $task5ans ]; then 
+    flag=$(echo -e "${task5ans}FLAG5" | shasum -a 1)
+    echo -e "Congratulations you successfully manually recovered a file from low level sector locations!!!\n"
+    echo -e "Here is your flag: $flag"
+fi

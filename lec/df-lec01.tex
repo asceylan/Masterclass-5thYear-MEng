@@ -188,17 +188,17 @@ The rest of the resources and a can be found here:\\
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Analysis Types}
-	\subsection*{Analysis Types}
-	\begin{block}{Live Analysis:}
-		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 495-496). Pearson Education. Kindle Edition.}}
-	\end{block}
-
-	\begin{block}{Dead Analysis:}
-		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 496-497). Pearson Education. Kindle Edition. }}
-	\end{block}
-\end{frame}
+%\begin{frame}
+%	\frametitle{Analysis Types}
+%	\subsection*{Analysis Types}
+%	\begin{block}{Live Analysis:}
+%		``A live analysis occurs when you use the operating system or other resources of the system being investigated to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 495-496). Pearson Education. Kindle Edition.}}
+%	\end{block}
+%
+%	\begin{block}{Dead Analysis:}
+%		``A dead analysis occurs when you are running trusted applications in a trusted operating system to find evidence.'' - Brian Carrier\footnote{\tiny{Carrier, Brian. File System Forensic Analysis (Kindle Locations 496-497). Pearson Education. Kindle Edition. }}
+%	\end{block}
+%\end{frame}
 
 \begin{frame} %Title Page
 	\section{Forensic Imaging}
@@ -306,11 +306,14 @@ The rest of the resources and a can be found here:\\
 
 \begin{frame}
 	\begin{figure}[h]
-		\includegraphics[scale=0.4]{abstract-fs-diagram}
-		\caption{Abstract Diagram of a File System on a Computer}
-		\label{fig:abstract-fs-diagram}	
+		\begin{minipage}[c]{0.6\textwidth}
+			\includegraphics[scale=0.53]{abstract-fs-diagram}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.37\textwidth}
+			\caption{Abstract Diagram of a File System on a Computer}
+			\label{fig:abstract-fs-diagram}	
+		\end{minipage}
 	\end{figure}
-	
 \end{frame}
 
 \begin{frame}
@@ -340,8 +343,8 @@ The rest of the resources and a can be found here:\\
 \begin{frame}
 	\frametitle{File System Categories Interaction}
 	\begin{figure}[h]
-		\includegraphics[scale=0.40]{fs-category-interaction-briancarrier}
-		\caption{File System Categories Interaction}
+		\includegraphics[scale=0.36]{fs-category-interaction-briancarrier}
+		\caption{File System Categories Interaction\footnote{\tiny Carrier, Brian. File System Forensic Analysis (Kindle Location 3563). Pearson Education. Kindle Edition. }}
 		\label{fig:fs-category-interaction}
 	\end{figure}
 \end{frame}
@@ -349,8 +352,8 @@ The rest of the resources and a can be found here:\\
 \begin{frame}
 	\frametitle{File System Categories By Example}
 	\begin{figure}[h]
-		\includegraphics[scale=0.65]{file-system-example}
-		\caption{File System Example}
+		\includegraphics[scale=0.61]{file-system-example}
+		\caption{File System Example\footnote{\tiny Carrier, Brian. File System Forensic Analysis (Kindle Location 3797). Pearson Education. Kindle Edition. }}
 		\label{fig:fs-example}
 	\end{figure}
 \end{frame}
@@ -427,7 +430,7 @@ The rest of the resources and a can be found here:\\
 	\end{block}
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.3]{guymager-window}
+		\includegraphics[scale=0.29]{guymager-window}
 		\caption{\textit{guymager gui window example}}
 		\label{fig:guymager-main-window}
 	\end{figure}
@@ -544,7 +547,7 @@ TSK commands starting with an \texttt{i} allow for metadata structure analysis. 
 	\annotatedFigureBox{0.0005,0.7893}{0.1495,0.8426}{C}{0.1495,0.7893}%br
 	\annotatedFigureBox{-0.002,0.5467}{0.4358,0.721}{D}{0.4358,0.721}%tr
 	\annotatedFigureBox{-0.0015,0.438}{0.0605,0.4863}{E}{0.0605,0.438}%br
-	\annotatedFigureBox{0.4345,0.0523}{0.4965,0.0949}{F}{0.4965,0.0949}%tr
+	\annotatedFigureBox{0.179,0.0005}{0.2547,0.0459}{F}{0.2547,0.0459}%tr
 \end{annotatedFigure}
 \caption{\textbf{Metadata Structure info} --  use of inode(A), related file has been deleted (B), file size (C) creation and access times (D), start sector of previously attached data (E), end sector of previously attached data(F).}
 \label{fig:istat-output}
@@ -718,6 +721,7 @@ Given the above gathered infomation we can now recover a file, this method uses 
 	\frametitle{Careers}
 	\section{Careers}
 	\begin{itemize}
+		\item \textbf{Police Scotland}\footnote{\tiny\url{http://www.scotland.police.uk/recruitment/police-staff/org-current-vacancies/}}
 		\item \textbf{GHCQ} - Internet and Systems Investigation: Forensic Technologist\footnote{\tiny\url{https://recruitmentservices.applicationtrack.com/vx/lang-en-GB/mobile-0/appcentre-3/brand-2/xf-bd8ab30ccf84/candidate/so/pm/1/pl/6/opp/1268}}
 		\item \textbf{Cyfor} - eDiscovery Digital Forensics and Cyber Security\footnote{\tiny\url{https://cyfor.co.uk/careers/}}
 		\item \textbf{PwC} - Graduate, Technology, eDiscovery {\&} Forensic Computing, Birmingham 2018\footnote{\tiny\url{http://www.careersstudent.pwc.co.uk/ShowJob/Id/882361/Graduate,-Technology,-eDiscovery-Forensic-Computing,-Birmingham-2018/}}

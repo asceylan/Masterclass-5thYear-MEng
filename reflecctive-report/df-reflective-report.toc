@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Producing Lab {\&} Lecture Materials}{2}{section.1}
+\contentsline {section}{\numberline {2}Lecture}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Areas I am Proud of}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Areas of Improvement}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Review of Feedback Received}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Constructive Feedback Received}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Lab}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Areas I am Proud Of}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Areas of Improvement}{7}{subsection.3.2}

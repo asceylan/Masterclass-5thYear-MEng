@@ -45,6 +45,9 @@
       \large\textit{File System Forensics Lab}\\
       \large\textit{Fraser Brown - Software Engineering MEng}
    \end{center}
+   
+This document is an edited version of Dr. Mike Just's original guide, all sections unrelated to this digital forensics lab have been removed and a new \texttt{virutalbox} Kali Linux image has been listed.
+
 \section{Lab Environment}
 In order to create a Kali Linux VM, \textbf{copy the file} form my \texttt{Public} directory into \texttt{your} \texttt{/scratch/} drive as shown below:\\
 \begin{tabular}{|c|}
@@ -54,17 +57,12 @@ In order to create a Kali Linux VM, \textbf{copy the file} form my \texttt{Publi
 \end{tabular}
 
 \begin{enumerate}
-	\item \textbf{Before Loading the \texttt{Kali} VM}, open \texttt{virtualbox} and change the ``Default Machine Folder'' to \texttt{/scratch/} (in short, you can change this option after selecting\\ \verb|File --> Preferences --> General|
+	\item \textbf{Before Loading the \texttt{Kali} VM}, open \texttt{virtualbox} and change the ``Default Machine Folder'' to \texttt{/scratch/}\\ \verb|File --> Preferences --> General|
 	\item \textbf{Then, load the \texttt{Kali} VM} into \texttt{virtualbox} as follows:
 	\begin{enumerate}
 		\item Choose \verb|File --> Import Appliance|
 		\item For \texttt{Appliance to Import}, find \texttt{/scratch/Kali-Linux-2018.1-vbox-amd64.ova} and click Next.
 		\item For \texttt{Appliance Settings}, select \texttt{Reinitialize the Mac Address of all network cards} and then choose Import.
-	\end{enumerate}
-	\item \textbf{After loading the VM, right-click} on the \texttt{Kali} VM in \texttt{virtualbox} to select \texttt{Settings} and do the following: 
-	\begin{enumerate}
-		\item Under \texttt{General-->Basic}, set the \texttt{Name} of the VM to whatever you wish.
-		\item Under \texttt{System-->Motherboard}, change the \texttt{Memory Size} from \texttt{2048MB} to \texttt{1024MB}.
 	\end{enumerate}
 \end{enumerate}
 
